@@ -1,0 +1,23 @@
+$ cat /etc/os-release | head -2
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+$ dpkg -l nginx openssl | tail -2
+ii nginx 1.24.0-2ubuntu7.19
+ii openssl 3.0.13-0ubuntu3.16
+$ nginx -v
+nginx version: nginx/1.24.0 (Ubuntu)
+$ ls -l /etc/nginx/ssl
+-rw-r--r-- 1 root root 1277 Nov 18 16:50 server.crt
+-rw------- 1 root root 1704 Nov 18 16:50 server.key
+$ ln -sf /etc/nginx/sites-available/pr6-tls /etc/nginx/sites-enabled/pr6-tls && ls /etc/nginx/sites-enabled
+default
+pr6-tls
+$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+$ sudo systemctl restart nginx && systemctl is-active nginx
+active
+$ ss -ltn | grep -E ":(80|443) "
+LISTEN 0.0.0.0:443
+LISTEN 0.0.0.0:80
+LISTEN [::]:80

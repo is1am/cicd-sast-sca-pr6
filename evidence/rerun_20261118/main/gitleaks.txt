@@ -1,0 +1,473 @@
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m12:27PM[0m [32mINF[0m [1mUnknown SCM platform. Use --platform to include links in findings.[0m [36mhost=[0m
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/owasp_zap/dumps/A01_lab_v1_2_own_profile.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_2_own_profile.txt:jwt:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/owasp_zap/dumps/A01_lab_v1_4_foreign_order.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_4_foreign_order.txt:jwt:9
+
+Finding:     ...le":"user","token":"[1;3;mREDACTED[0m","user":"aliya"}
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/owasp_zap/dumps/A01_lab_v1_1_login_aliya.txt
+Line:        21
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_1_login_aliya.txt:jwt:21
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.337732
+File:        evidence/owasp_zap/dumps/A01_lab_v2_5_admin_users.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v2_5_admin_users.txt:jwt:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/owasp_zap/dumps/A01_lab_v1_3_foreign_profile.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_3_foreign_profile.txt:jwt:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.337732
+File:        evidence/owasp_zap/dumps/A01_lab_v2_2_own_profile.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v2_2_own_profile.txt:jwt:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.337732
+File:        evidence/owasp_zap/dumps/A01_lab_v2_4_foreign_order.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v2_4_foreign_order.txt:jwt:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.718948
+File:        evidence/owasp_zap/dumps/A01_juice_2_own_basket.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_2_own_basket.txt:jwt:9
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.804229
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A01_juice_2_own_basket.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_2_own_basket.txt:generic-api-key:9
+
+Finding:     ...tication":{"token":"[1;3;mREDACTED[0m","bid":6,"umail":"st...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.718948
+File:        evidence/owasp_zap/dumps/A01_juice_1_login_user.txt
+Line:        28
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_1_login_user.txt:jwt:28
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.804229
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A01_juice_1_login_user.txt
+Line:        28
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_1_login_user.txt:generic-api-key:28
+
+Finding:     ...le":"user","token":"[1;3;mREDACTED[0m","user":"aliya"}
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.337732
+File:        evidence/owasp_zap/dumps/A01_lab_v2_1_login_aliya.txt
+Line:        26
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v2_1_login_aliya.txt:jwt:26
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.718948
+File:        evidence/owasp_zap/dumps/A01_juice_4_foreign_basket_2.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_4_foreign_basket_2.txt:jwt:9
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.804229
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A01_juice_4_foreign_basket_2.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_4_foreign_basket_2.txt:generic-api-key:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.337732
+File:        evidence/owasp_zap/dumps/A01_lab_v2_3_foreign_profile.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v2_3_foreign_profile.txt:jwt:9
+
+Finding:     ...tication":{"token":"[1;3;mREDACTED[0m","bid":1,"umail":"ad...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.737206
+File:        evidence/owasp_zap/dumps/A03_juice_3_login_bypass.txt
+Line:        28
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A03_juice_3_login_bypass.txt:jwt:28
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.545959
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A03_juice_3_login_bypass.txt
+Line:        28
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A03_juice_3_login_bypass.txt:generic-api-key:28
+
+Finding:     ...e":"admin","token":"[1;3;mREDACTED[0m","user":"admin"}
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.338637
+File:        evidence/owasp_zap/dumps/A03_lab_v1_1_login_bypass.txt
+Line:        21
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A03_lab_v1_1_login_bypass.txt:jwt:21
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.718948
+File:        evidence/owasp_zap/dumps/A01_juice_3_foreign_basket_1.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_3_foreign_basket_1.txt:jwt:9
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.804229
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A01_juice_3_foreign_basket_1.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_3_foreign_basket_1.txt:generic-api-key:9
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt:jwt:9
+
+Finding:     ...@lab.local","id":1,"password":"[1;3;mREDACTED[0m","role":"admin","use...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.503928
+File:        evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt
+Line:        20
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt:generic-api-key:20
+
+Finding:     ...@lab.local","id":2,"password":"[1;3;mREDACTED[0m","role":"user","user...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.527518
+File:        evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt
+Line:        20
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt:generic-api-key:20
+
+Finding:     ...@lab.local","id":3,"password":"[1;3;mREDACTED[0m","role":"user","user...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.777518
+File:        evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt
+Line:        20
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt:generic-api-key:20
+
+Finding:     ...@lab.local","id":4,"password":"[1;3;mREDACTED[0m","role":"user","user...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.608459
+File:        evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt
+Line:        20
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_lab_v1_5_admin_users.txt:generic-api-key:20
+
+Finding:     ...thorization: Bearer [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.718948
+File:        evidence/owasp_zap/dumps/A01_juice_5_users_list.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_5_users_list.txt:jwt:9
+
+Finding:     ...p","role":"deluxe","deluxeToken":"[1;3;mREDACTED[0m","lastLoginIp":"","p...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.847024
+File:        evidence/owasp_zap/dumps/A01_juice_5_users_list.txt
+Line:        27
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_5_users_list.txt:generic-api-key:27
+
+Finding:     password":"REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.804229
+Tags:        [decoded:base64 decode-depth:1]
+File:        evidence/owasp_zap/dumps/A01_juice_5_users_list.txt
+Line:        9
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/owasp_zap/dumps/A01_juice_5_users_list.txt:generic-api-key:9
+
+Finding:     Master-Key: [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.909641
+File:        evidence/tls_before/openssl_tls11.txt
+Line:        58
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/tls_before/openssl_tls11.txt:generic-api-key:58
+
+Finding:     Master-Key: [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.927406
+File:        evidence/tls_before/openssl_tls12.txt
+Line:        58
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/tls_before/openssl_tls12.txt:generic-api-key:58
+
+Finding:     Master-Key: [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.948435
+File:        evidence/tls_after/openssl_tls12.txt
+Line:        58
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/tls_after/openssl_tls12.txt:generic-api-key:58
+
+Finding:     Master-Key: [1;3;mREDACTED[0m
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     3.881490
+File:        evidence/tls_before/openssl_tls10.txt
+Line:        58
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/tls_before/openssl_tls10.txt:generic-api-key:58
+
+Finding:     ..."Possible hardcoded password: '[1;3;mREDACTED[0m'",
+Secret:      [1;3;mREDACTED[0m
+RuleID:      generic-api-key
+Entropy:     5.000000
+File:        evidence/v1_vulnerable/bandit.json
+Line:        103
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/bandit.json:generic-api-key:103
+
+Finding:     ...orization': 'Bearer [1;3;mREDACTED[0m'})
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/v1_vulnerable/pytest.txt
+Line:        68
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/pytest.txt:jwt:68
+
+Finding:     ...orization': 'Bearer [1;3;mREDACTED[0m'})
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.341758
+File:        evidence/v1_vulnerable/pytest.txt
+Line:        81
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/pytest.txt:jwt:81
+
+Finding:     ...orization': 'Bearer [1;3;mREDACTED[0m'})
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.308626
+File:        evidence/v1_vulnerable/pytest.txt
+Line:        94
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/pytest.txt:jwt:94
+
+Finding:     ...Y key forged token: [1;3;mREDACTED[0m response: {\"action...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.619840
+File:        evidence/v1_vulnerable/pip-audit.json
+Line:        1
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/pip-audit.json:jwt:1
+
+Finding:     ... key\nforged token: [1;3;mREDACTED[0mresponse:\n{\"action...
+Secret:      [1;3;mREDACTED[0m
+RuleID:      jwt
+Entropy:     5.638552
+File:        evidence/v1_vulnerable/trivy.json
+Line:        1147
+Commit:      f5df3382b3c65163779b2c1a4e9602b966862b81
+Author:      Nurtaz1nov
+Email:       97106124+Nurtaz1nov@users.noreply.github.com
+Date:        2026-11-18T12:23:44Z
+Fingerprint: f5df3382b3c65163779b2c1a4e9602b966862b81:evidence/v1_vulnerable/trivy.json:jwt:1147
+
+[90m12:27PM[0m [32mINF[0m [1m4 commits scanned.[0m
+[90m12:27PM[0m [32mINF[0m [1mscanned ~1894160 bytes (1.89 MB) in 1.74s[0m
+[90m12:27PM[0m [33mWRN[0m [1mleaks found: 38[0m

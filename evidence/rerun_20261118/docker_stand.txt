@@ -1,0 +1,8 @@
+$ docker run -d --name juice -p 3000:3000 bkimminich/juice-shop
+$ docker run -d --name zapgui --network host zaproxy/zap-stable zap-webswing.sh
+$ docker ps --format "table {{.Image}}\t{{.Status}}\t{{.Ports}}"
+IMAGE                                                  STATUS                    PORTS
+zaproxy/zap-stable                                     Up 17 minutes (healthy)   
+bkimminich/juice-shop                                  Up 17 minutes             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+$ curl -s -o /dev/null -w "%{http_code}\n" http://localhost:3000/
+200

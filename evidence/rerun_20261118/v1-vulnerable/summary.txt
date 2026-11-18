@@ -1,0 +1,6 @@
+gitleaks   exit=1   FAIL
+semgrep    exit=1   FAIL
+bandit     exit=1   FAIL
+pip_audit  exit=1   FAIL
+trivy      exit=1   FAIL
+pytest     exit=1   FAIL

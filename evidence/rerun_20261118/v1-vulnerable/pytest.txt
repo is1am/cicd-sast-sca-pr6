@@ -1,0 +1,211 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: /root/pr6-rerun-v1-vulnerable
+configfile: pytest.ini
+testpaths: tests
+collected 15 items
+
+tests/test_security.py FFF.F.FFFF.FFFF                                   [100%]
+
+=================================== FAILURES ===================================
+_________________ test_login_sql_injection_bypass_is_rejected __________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_login_sql_injection_bypass_is_rejected(client):
+        r = client.post("/api/login", json={"username": "admin' --", "password": "x"})
+>       assert r.status_code == 401
+E       assert 200 == 401
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:34: AssertionError
+_________________ test_login_sql_injection_or_true_is_rejected _________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_login_sql_injection_or_true_is_rejected(client):
+        r = client.post("/api/login", json={"username": "' OR 1=1 --", "password": "x"})
+>       assert r.status_code == 401
+E       assert 200 == 401
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:39: AssertionError
+_______________ test_search_union_injection_does_not_leak_users ________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_search_union_injection_does_not_leak_users(client):
+        r = client.get("/api/products", query_string={"q": "zzz' UNION SELECT id, username, password, role FROM users --"})
+        body = r.get_data(as_text=True)
+>       assert "admin" not in body and "aliya" not in body
+E       assert ('admin' not in '[{"descript...":"user"}]\n'
+E         
+E         'admin' is contained here:
+E           1,"name":"admin","price":"admin"},{"description":"18010f1845ab6314846de938bbf93335","id":2,"name":"aliya","price":"user"},{"description":"1750ea32d659d08b6c51f64cb255633b","id":3,"name":"timur","price":"user"},{"description":"da43c505453671f467ecaa63c0e1b6f0","id":4,"name":"dana","price":"user"}]
+E         ?           +++++)
+
+tests/test_security.py:45: AssertionError
+____________________ test_ping_command_injection_is_blocked ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_ping_command_injection_is_blocked(client):
+        r = client.get("/api/tools/ping", query_string={"host": "127.0.0.1; id"})
+>       assert r.status_code in (400, 404)
+E       assert 200 in (400, 404)
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:55: AssertionError
+____________________ test_idor_foreign_profile_is_forbidden ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_idor_foreign_profile_is_forbidden(client):
+        h = login(client, "aliya")
+>       assert client.get("/api/users/3", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/users/3', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiYWxpeWEiLCJyb2xlIjoidXNlciJ9.fXInHtEC6QDjWbzS5QVMju_D-ktxI0LBOvX8aDx9EO0'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:68: AssertionError
+_____________________ test_idor_foreign_order_is_forbidden _____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_idor_foreign_order_is_forbidden(client):
+        h = login(client, "aliya")
+>       assert client.get("/api/orders/2", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/orders/2', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiYWxpeWEiLCJyb2xlIjoidXNlciJ9.fXInHtEC6QDjWbzS5QVMju_D-ktxI0LBOvX8aDx9EO0'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:73: AssertionError
+____________________ test_admin_endpoint_forbidden_for_user ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_admin_endpoint_forbidden_for_user(client):
+        h = login(client, "timur")
+>       assert client.get("/api/admin/users", headers=h).status_code == 403
+E       AssertionError: assert 200 == 403
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+E        +    where <WrapperTestResponse streamed [200 OK]> = get('/api/admin/users', headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoidGltdXIiLCJyb2xlIjoidXNlciJ9.2pBzaYVGAmpzktJG9vKjrAX9312Fu-7lZseg_AboXi4'})
+E        +      where get = <FlaskClient <Flask 'src.shop.app'>>.get
+
+tests/test_security.py:78: AssertionError
+________ test_admin_endpoint_allowed_for_admin_without_password_hashes _________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_admin_endpoint_allowed_for_admin_without_password_hashes(client):
+        h = login(client, "admin")
+        r = client.get("/api/admin/users", headers=h)
+        assert r.status_code == 200
+>       assert all("password" not in u for u in r.get_json())
+E       assert False
+E        +  where False = all(<generator object test_admin_endpoint_allowed_for_admin_without_password_hashes.<locals>.<genexpr> at 0x792cc0454ad0>)
+
+tests/test_security.py:85: AssertionError
+___________________ test_yaml_import_rejects_python_objects ____________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_yaml_import_rejects_python_objects(client):
+        payload = b'!!python/object/apply:os.system ["echo pwned"]'
+        r = client.post("/api/import", data=payload, headers=login(client, "admin"))
+>       assert r.status_code == 400
+E       assert 200 == 400
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_security.py:96: AssertionError
+----------------------------- Captured stdout call -----------------------------
+pwned
+_____________________ test_errors_do_not_leak_stack_trace ______________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_errors_do_not_leak_stack_trace(client):
+        r = client.post("/api/login", data="not-json", headers={"Content-Type": "application/json"})
+>       assert "Traceback" not in r.get_data(as_text=True)
+E       assert 'Traceback' not in '{"error":"4...tand.\\n"}\n'
+E         
+E         'Traceback' is contained here:
+E         ?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ...
+E         
+E         ...Full output truncated, use '-vv' to show
+
+tests/test_security.py:101: AssertionError
+________________________ test_security_headers_present _________________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_security_headers_present(client):
+        r = client.get("/api/products")
+>       assert r.headers.get("X-Content-Type-Options") == "nosniff"
+E       AssertionError: assert None == 'nosniff'
+E        +  where None = get('X-Content-Type-Options')
+E        +    where get = Headers([('Content-Type', 'application/json'), ('Content-Length', '1089')]).get
+E        +      where Headers([('Content-Type', 'application/json'), ('Content-Length', '1089')]) = <WrapperTestResponse streamed [200 OK]>.headers
+
+tests/test_security.py:106: AssertionError
+_____________________ test_passwords_are_not_unsalted_md5 ______________________
+
+client = <FlaskClient <Flask 'src.shop.app'>>
+
+    def test_passwords_are_not_unsalted_md5(client):
+        row = db.get_conn().execute("SELECT password FROM users WHERE username='admin'").fetchone()
+>       assert len(row["password"]) != 32 and "$" in row["password"]
+E       AssertionError: assert (32 != 32)
+E        +  where 32 = len('8c09012a00e1cbb212f0414febf629cd')
+
+tests/test_security.py:113: AssertionError
+=============================== warnings summary ===============================
+../../opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:726: 17 warnings
+  /opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:726: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    parts = parts or [ast.Str("")]
+
+../../opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:723: 74 warnings
+  /opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:723: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    _convert(elem) if is_dynamic else ast.Str(s=elem)
+
+../../usr/lib/python3.12/ast.py:587: 74 warnings
+  /usr/lib/python3.12/ast.py:587: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    return Constant(*args, **kwargs)
+
+../../opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:730: 122 warnings
+  /opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:730: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    if isinstance(p, ast.Str) and isinstance(ret[-1], ast.Str):
+
+../../opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: 116 warnings
+  /opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+../../opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: 58 warnings
+  /opt/pr6vuln/lib/python3.12/site-packages/werkzeug/routing/rules.py:731: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+    ret[-1] = ast.Str(ret[-1].s + p.s)
+
+tests/test_security.py::test_user_can_read_own_profile
+tests/test_security.py::test_idor_foreign_profile_is_forbidden
+tests/test_security.py::test_idor_foreign_order_is_forbidden
+tests/test_security.py::test_admin_endpoint_forbidden_for_user
+tests/test_security.py::test_admin_endpoint_allowed_for_admin_without_password_hashes
+  /opt/pr6vuln/lib/python3.12/site-packages/jwt/api_jwt.py:125: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = timegm(datetime.utcnow().utctimetuple())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_security.py::test_login_sql_injection_bypass_is_rejected - ...
+FAILED tests/test_security.py::test_login_sql_injection_or_true_is_rejected
+FAILED tests/test_security.py::test_search_union_injection_does_not_leak_users
+FAILED tests/test_security.py::test_ping_command_injection_is_blocked - asser...
+FAILED tests/test_security.py::test_idor_foreign_profile_is_forbidden - Asser...
+FAILED tests/test_security.py::test_idor_foreign_order_is_forbidden - Asserti...
+FAILED tests/test_security.py::test_admin_endpoint_forbidden_for_user - Asser...
+FAILED tests/test_security.py::test_admin_endpoint_allowed_for_admin_without_password_hashes
+FAILED tests/test_security.py::test_yaml_import_rejects_python_objects - asse...
+FAILED tests/test_security.py::test_errors_do_not_leak_stack_trace - assert '...
+FAILED tests/test_security.py::test_security_headers_present - AssertionError...
+FAILED tests/test_security.py::test_passwords_are_not_unsalted_md5 - Assertio...
+================== 12 failed, 3 passed, 466 warnings in 1.38s ==================
