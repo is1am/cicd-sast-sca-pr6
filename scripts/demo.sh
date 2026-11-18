@@ -14,7 +14,8 @@ pause(){ [ -n "${DEMO_NOPAUSE:-}" ] && return; read -r -p "  [Enter — даль
 
 checkout() {   # копия репозитория на нужном теге (рабочую папку не трогаем)
   git config --global --add safe.directory '*' 2>/dev/null
-  rm -rf "$DEMO-$1" && git clone -q "$REPO" "$DEMO-$1" && git -C "$DEMO-$1" checkout -q "$1"
+  # только история до нужного тега/ветки — как в CI на этом коммите (Gitleaks проверяет всю историю клона)
+  rm -rf "$DEMO-$1" && git clone -q --single-branch --branch "$1" "$REPO" "$DEMO-$1" 2>/dev/null
   cp "$REPO/scripts/run_scans.sh" "$DEMO-$1/scripts/run_scans.sh"
 }
 
