@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: /root/pr6-v2
+configfile: pytest.ini
+testpaths: tests
+collected 15 items
+
+tests/test_security.py ...............                                   [100%]
+
+============================== 15 passed in 5.83s ==============================

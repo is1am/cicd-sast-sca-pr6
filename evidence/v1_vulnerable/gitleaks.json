@@ -1,0 +1,22 @@
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 19,
+  "EndLine": 19,
+  "StartColumn": 2,
+  "EndColumn": 48,
+  "Match": "SECRET_KEY = \"REDACTED\"",
+  "Secret": "REDACTED",
+  "File": "src/shop/app.py",
+  "SymlinkFile": "",
+  "Commit": "d218f773a45467ab27f18ad14875d6f744b3bef1",
+  "Entropy": 5,
+  "Author": "Nurtaz1nov",
+  "Email": "97106124+Nurtaz1nov@users.noreply.github.com",
+  "Date": "2026-11-18T09:16:50Z",
+  "Message": "v1: ENU Lab Shop API и конвейер SAST/SCA (версия с уязвимостями)\n\nCo-Authored-By: Claude Opus 5.5 \u003cnoreply@anthropic.com\u003e",
+  "Tags": [],
+  "Fingerprint": "d218f773a45467ab27f18ad14875d6f744b3bef1:src/shop/app.py:generic-api-key:19"
+ }
+]

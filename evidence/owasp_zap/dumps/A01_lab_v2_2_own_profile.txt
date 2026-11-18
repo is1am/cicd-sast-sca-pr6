@@ -1,0 +1,26 @@
+### A01_lab_v2_2_own_profile
+# ZAP history id: 34
+
+GET http://localhost:5002/api/users/2 HTTP/1.1
+Host: localhost:5002
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTUwMDI2ODEsImV4cCI6MTc5NTAwNDQ4MX0.Pfzq8mY7NAEIw89pdiCZYJn8zddwMY56mL_tjEcTtpk
+
+
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:21 GMT
+Content-Type: application/json
+Content-Length: 203
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+Referrer-Policy: no-referrer
+Cache-Control: no-store
+Connection: close
+
+{"card_last4":"1111","email":"aliya@lab.local","full_name":"\u0410\u043b\u0438\u044f \u0421\u0435\u0440\u0438\u043a\u043e\u0432\u0430","id":2,"phone":"+7 700 000 00 02","role":"user","username":"aliya"}
+

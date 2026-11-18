@@ -1,0 +1,13 @@
+root@lab:~# docker run --rm --network host -v /tmp/zapwrk:/zap/wrk zaproxy/zap-stable zap-baseline.py \
+      -t http://127.0.0.1:5002/api/products -c rules.tsv -r zap_baseline_v2.html -J zap_baseline_v2.json
+...
+PASS: Application Error Disclosure [90022]
+PASS: WSDL File Detection [90030]
+PASS: Loosely Scoped Cookie [90033]
+IGNORE: Non-Storable Content [10049] x 5
+INFO: Server Leaks Version Information via "Server" HTTP Response Header Field [10036] x 4
+	http://127.0.0.1:5002/ (404 Not Found)
+WARN-NEW: Cross-Origin-Resource-Policy Header Missing or Invalid [90004] x 1
+	http://127.0.0.1:5002/api/products (200 OK)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 1	WARN-INPROG: 0	INFO: 1	IGNORE: 1	PASS: 65
+(exit code 2 → задание DAST в GitHub Actions завершилось ошибкой)

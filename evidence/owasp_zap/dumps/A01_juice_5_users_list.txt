@@ -1,0 +1,28 @@
+### A01_juice_5_users_list
+# ZAP history id: 24
+
+GET http://localhost:3000/api/Users HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoyNiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6InN0dWRlbnQxNzk1MDAyNjc1QGxhYi5sb2NhbCIsInBhc3N3b3JkIjoiOTlhNWY3YWU0MDljZGQ5Mzg2N2IzODBlY2RhNTJmMzQiLCJyb2xlIjoiY3VzdG9tZXIiLCJkZWx1eGVUb2tlbiI6IiIsImxhc3RMb2dpbklwIjoiMC4wLjAuMCIsInByb2ZpbGVJbWFnZSI6Ii9hc3NldHMvcHVibGljL2ltYWdlcy91cGxvYWRzL2RlZmF1bHQuc3ZnIiwidG90cFNlY3JldCI6IiIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJ1cGRhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJkZWxldGVkQXQiOm51bGx9LCJiaWQiOjYsImlhdCI6MTc5NTAwMjY3Nn0.hWmqVkboexjeyVqaFtpaLZcYcHrPu-tqtDMpWdWvwfU1m8QWrB3dEIM6MKS5RmogsLw7CcrwwaxJ1EDIPnwaIlr6JUFEDHSoB6QGezZCXK0U2ShpzZl4XdHyjjnpsgJmdQL8fkfK-QiLpgdLHdR-zATVm9WL2HZP6aLp6NEl0bc
+
+
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 7202
+ETag: W/"1c22-N/GAPohSv2X4Fub8tgxFNgV0OqA"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"status":"success","data":[{"id":1,"username":"","email":"admin@juice-sh.op","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive":true,"createdAt":"2026-11-18T11:50:51.967Z","updatedAt":"2026-11-18T11:50:51.967Z","deletedAt":null},{"id":2,"username":"","email":"jim@juice-sh.op","role":"customer","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/default.svg","isActive":true,"createdAt":"2026-11-18T11:50:51.967Z","updatedAt":"2026-11-18T11:50:51.967Z","deletedAt":null},{"id":3,"username":"","email":"bender@juice-sh.op","role":"customer","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/default.svg","isActive":true,"createdAt":"2026-11-18T11:50:51.967Z","updatedAt":"2026-11-18T11:50:51.967Z","deletedAt":null},{"id":4,"username":"bkimminich","email":"bjoern.kimminich@gmail.com","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive":true,"createdAt":"2026-11-18T11:50:51.967Z","updatedAt":"2026-11-18T11:50:51.967Z","deletedAt":null},{"id":5,"username":"","email":"ciso@juice-sh.op","role":"deluxe","deluxeToken":"d715c2c75d4a42d3825a050e0a0163c1959b51165373f17bd8eed7b1e05bf20d","lastLoginIp":"","profileImage":"assets/public/images/uploads/default.svg","isActive":true,"createdAt":"2026-11-18T11:50:51.968Z","updatedAt":"2026-11-18T11:50:51.968Z","deletedAt":null},{"id":6,"username":"","email":"support@juice-sh.op","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive":true,"createdAt":"2026-11-18T11:50:51.968Z","updatedAt":"2026-11-18T11:50:51.968Z","deletedAt":null},{"id":7,"username":"","email":"morty@juice-sh.op","role":"customer","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/default.svg","isActive":true,"createdAt":"2026-11-18T11:50:51.968Z","updatedAt":"2026-11-18T11:50:51.968Z","deletedAt":null},{"id":8,"username":"","email":"mc.safesearch@juice-sh.op","role":"customer","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/default.svg","isActive":true,"createdAt":"2026-11-18T11:50:51.968Z","updatedAt":"2026-11-18T11:50:51.968Z","deletedAt":null},{"id":9,"username":"","email":"J12934@juice-sh.op","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive":true,"createdAt":"2026-11-18T11:50:51.969Z","updatedAt":"2026-11-18T11:50:51.969Z","deletedAt":null},{"id":10,"username":"wurstbrot","email":"wurstbrot@juice-sh.op","role":"admin","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/uploads/defaultAdmin.png","isActive":true,"createdAt":"2026-11-18T11:50:51.969Z","updatedAt":"2026-11-18T11:50:51.969Z","deletedAt":null},{"id":11,"username":"","email":"amy@juice-sh.op","role":"customer","deluxeToken":"","lastLoginIp":"","profileImage":"assets/public/images/
+... [обрезано, всего 7201 байт]

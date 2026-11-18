@@ -1,0 +1,27 @@
+### A01_lab_v2_1_login_aliya
+# ZAP history id: 33
+
+POST http://localhost:5002/api/login HTTP/1.1
+Host: localhost:5002
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 47
+Content-Type: application/json
+
+{"username": "aliya", "password": "Aliya#2026"}
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:21 GMT
+Content-Type: application/json
+Content-Length: 202
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+Referrer-Policy: no-referrer
+Cache-Control: no-store
+Connection: close
+
+{"role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTUwMDI2ODEsImV4cCI6MTc5NTAwNDQ4MX0.Pfzq8mY7NAEIw89pdiCZYJn8zddwMY56mL_tjEcTtpk","user":"aliya"}
+

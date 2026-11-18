@@ -1,0 +1,11 @@
+root@lab:~/pr6# scripts/tls_gate.sh localhost 443    # nginx/tls-hardened.conf
+PASS TLS 1.0                            ожидается reject получено reject 40B723FD297E0000:error:0A00042E:SSL routines:ssl3_read_bytes:tlsv1 alert protocol version:
+PASS TLS 1.1                            ожидается reject получено reject 40A775CAFD7E0000:error:0A00042E:SSL routines:ssl3_read_bytes:tlsv1 alert protocol version:
+PASS TLS 1.2                            ожидается accept получено accept TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256
+PASS TLS 1.3                            ожидается accept получено accept TLSv1.3 TLS_AES_256_GCM_SHA384
+PASS Шифры без PFS (RSA kx)     ожидается reject получено reject 4097770E7D710000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure
+PASS CBC-шифры (SHA1)              ожидается reject получено reject 40F73B2F61730000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure
+PASS 3DES / RC4 / NULL / EXPORT         ожидается reject получено reject 40370920B9770000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure
+PASS HSTS                               strict-transport-security: max-age=31536000; includeSubDomains
+TLS gate: OK
+exit=0

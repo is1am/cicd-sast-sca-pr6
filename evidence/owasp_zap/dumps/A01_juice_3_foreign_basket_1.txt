@@ -1,0 +1,27 @@
+### A01_juice_3_foreign_basket_1
+# ZAP history id: 22
+
+GET http://localhost:3000/rest/basket/1 HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoyNiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6InN0dWRlbnQxNzk1MDAyNjc1QGxhYi5sb2NhbCIsInBhc3N3b3JkIjoiOTlhNWY3YWU0MDljZGQ5Mzg2N2IzODBlY2RhNTJmMzQiLCJyb2xlIjoiY3VzdG9tZXIiLCJkZWx1eGVUb2tlbiI6IiIsImxhc3RMb2dpbklwIjoiMC4wLjAuMCIsInByb2ZpbGVJbWFnZSI6Ii9hc3NldHMvcHVibGljL2ltYWdlcy91cGxvYWRzL2RlZmF1bHQuc3ZnIiwidG90cFNlY3JldCI6IiIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJ1cGRhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJkZWxldGVkQXQiOm51bGx9LCJiaWQiOjYsImlhdCI6MTc5NTAwMjY3Nn0.hWmqVkboexjeyVqaFtpaLZcYcHrPu-tqtDMpWdWvwfU1m8QWrB3dEIM6MKS5RmogsLw7CcrwwaxJ1EDIPnwaIlr6JUFEDHSoB6QGezZCXK0U2ShpzZl4XdHyjjnpsgJmdQL8fkfK-QiLpgdLHdR-zATVm9WL2HZP6aLp6NEl0bc
+
+
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 1994
+ETag: W/"7ca-oY8sdlse11s9bd17uA92ggoY/S4"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:17 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"status":"success","data":{"id":1,"coupon":null,"UserId":1,"createdAt":"2026-11-18T11:50:55.715Z","updatedAt":"2026-11-18T11:50:55.715Z","Products":[{"id":1,"name":"Apple Juice (1000ml)","description":"The all-time classic.","price":1.99,"deluxePrice":0.99,"image":"apple_juice.jpg","alternateImages":[{"file":"apple_juice-1x.avif","format":"image/avif","density":"1x"},{"file":"apple_juice-2x.avif","format":"image/avif","density":"2x"},{"file":"apple_juice-3x.avif","format":"image/avif","density":"3x"}],"createdAt":"2026-11-18T11:50:54.887Z","updatedAt":"2026-11-18T11:50:54.887Z","deletedAt":null,"BasketItem":{"ProductId":1,"BasketId":1,"id":1,"quantity":2,"createdAt":"2026-11-18T11:50:55.958Z","updatedAt":"2026-11-18T11:50:55.958Z"}},{"id":2,"name":"Orange Juice (1000ml)","description":"Made from oranges hand-picked by Uncle Dittmeyer.","price":2.99,"deluxePrice":2.49,"image":"orange_juice.jpg","alternateImages":[{"file":"orange_juice-1x.avif","format":"image/avif","density":"1x"},{"file":"orange_juice-2x.avif","format":"image/avif","density":"2x"},{"file":"orange_juice-3x.avif","format":"image/avif","density":"3x"}],"createdAt":"2026-11-18T11:50:54.887Z","updatedAt":"2026-11-18T11:50:54.887Z","deletedAt":null,"BasketItem":{"ProductId":2,"BasketId":1,"id":2,"quantity":3,"createdAt":"2026-11-18T11:50:55.958Z","updatedAt":"2026-11-18T11:50:55.958Z"}},{"id":3,"name":"Eggfruit Juice (500ml)","description":"Now with even more exotic flavour.","price":8.99,"deluxePrice":8.99,"image":"eggfruit_juice.jpg","alternateImages":[{"file":"eggfruit_juice-1x.avif","format":"image/avif","density":"1x"},{"file":"eggfruit_juice-2x.avif","format":"image/avif","density":"2x"},{"file":"eggfruit_juice-3x.avif","format":"image/avif","density":"3x"}],"createdAt":"2026-11-18T11:50:54.887Z","updatedAt":"2026-11-18T11:50:54.887Z","deletedAt":null,"BasketItem":{"ProductId":3,"BasketId":1,"id":3,"quantity":1,"createdAt":"2026-11-18T11:50:55.958Z","updatedAt":"2026-11-18T11:50:55.958Z"}}]}}

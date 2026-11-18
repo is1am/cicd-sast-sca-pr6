@@ -1,0 +1,55 @@
+<!doctype html><meta charset="utf-8">
+<style>
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#fff}
+.wrap{display:inline-block;padding:22px 26px;width:1480px}
+h3{margin:0 0 14px;font-size:20px;color:#1f2937}
+.row{display:flex;align-items:stretch;gap:14px}
+.col{flex:1;border:2px solid #cbd5e1;border-radius:10px;padding:10px 12px;background:#f8fafc}
+.col h4{margin:0 0 8px;font-size:15px;color:#334155;text-transform:uppercase;letter-spacing:.04em}
+.box{border-radius:7px;padding:7px 9px;margin:6px 0;font-size:14.5px;color:#0f172a;border:1px solid}
+.box b{display:block;font-size:15px}
+.box span{font-size:12.5px;color:#475569}
+.trg{background:#e0e7ff;border-color:#818cf8}
+.sec{background:#fef3c7;border-color:#f59e0b}
+.sast{background:#dbeafe;border-color:#3b82f6}
+.sca{background:#dcfce7;border-color:#22c55e}
+.tst{background:#f3e8ff;border-color:#a855f7}
+.dast{background:#ffe4e6;border-color:#f43f5e}
+.out{background:#e2e8f0;border-color:#64748b}
+.arrow{display:flex;align-items:center;font-size:30px;color:#64748b}
+.gate{margin-top:14px;padding:10px 14px;border:2px dashed #ef4444;border-radius:10px;font-size:14.5px;color:#7f1d1d;background:#fff1f2}
+</style>
+<div class="wrap">
+<h3>CI/CD Security Pipeline — .github/workflows/security-pipeline.yml (аналогично .gitlab-ci.yml)</h3>
+<div class="row">
+ <div class="col"><h4>Триггеры</h4>
+  <div class="box trg"><b>push → main</b><span>каждый коммит</span></div>
+  <div class="box trg"><b>pull_request</b><span>проверка до слияния</span></div>
+  <div class="box trg"><b>schedule (пн 03:00)</b><span>новые CVE без изменений кода</span></div>
+  <div class="box trg"><b>Dependabot</b><span>PR с обновлениями pip / actions</span></div>
+ </div>
+ <div class="arrow">➜</div>
+ <div class="col"><h4>Этап 1 — параллельно</h4>
+  <div class="box sec"><b>Secrets: Gitleaks</b><span>вся история git</span></div>
+  <div class="box sast"><b>SAST: Semgrep</b><span>p/python, p/flask, p/owasp-top-ten, p/secrets + свои правила</span></div>
+  <div class="box sast"><b>SAST: Bandit</b><span>severity ≥ medium</span></div>
+  <div class="box sast"><b>SAST: CodeQL</b><span>security-extended, анализ потоков данных</span></div>
+  <div class="box sca"><b>SCA: pip-audit + SBOM</b><span>PyPI Advisory / OSV, CycloneDX</span></div>
+  <div class="box sca"><b>SCA: Trivy fs</b><span>HIGH/CRITICAL с исправлением</span></div>
+  <div class="box sca"><b>SCA: Dependency Review</b><span>только для PR</span></div>
+  <div class="box tst"><b>Security tests: pytest</b><span>15 тестов SQLi / IDOR / RBAC</span></div>
+ </div>
+ <div class="arrow">➜</div>
+ <div class="col"><h4>Этап 2 — после gate</h4>
+  <div class="box dast"><b>DAST: OWASP ZAP baseline</b><span>запущенное приложение</span></div>
+  <div class="box dast"><b>TLS gate: Nginx + testssl.sh</b><span>TLS 1.2/1.3, PFS, HSTS</span></div>
+ </div>
+ <div class="arrow">➜</div>
+ <div class="col"><h4>Результаты</h4>
+  <div class="box out"><b>SARIF → Security / Code scanning</b><span>Semgrep, Bandit, CodeQL, Trivy</span></div>
+  <div class="box out"><b>Артефакты</b><span>SBOM, отчёты Gitleaks, Semgrep, ZAP, testssl</span></div>
+  <div class="box out"><b>Статус коммита / PR</b><span>✔ слияние разрешено · ✖ сборка остановлена</span></div>
+ </div>
+</div>
+<div class="gate"><b>Security gate:</b> ненулевой код возврата любого задания этапа 1 (секрет, находка SAST уровня ERROR/medium+, известная CVE, упавший тест) останавливает конвейер — этап 2 и слияние не выполняются.</div>
+</div>

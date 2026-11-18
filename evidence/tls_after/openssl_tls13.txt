@@ -1,0 +1,102 @@
+depth=0 C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+   i:C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov 18 11:50:05 2026 GMT; NotAfter: Nov 18 11:50:05 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDgzCCAmugAwIBAgIURBjmMiQmi1H7vWTXAlVBvTWSiWMwDQYJKoZIhvcNAQEL
+BQAwUTELMAkGA1UEBhMCS1oxDzANBgNVBAgMBkFzdGFuYTEPMA0GA1UEBwwGQXN0
+YW5hMQwwCgYDVQQKDANFTlUxEjAQBgNVBAMMCWxvY2FsaG9zdDAeFw0yNjExMTgx
+MTUwMDVaFw0yNzExMTgxMTUwMDVaMFExCzAJBgNVBAYTAktaMQ8wDQYDVQQIDAZB
+c3RhbmExDzANBgNVBAcMBkFzdGFuYTEMMAoGA1UECgwDRU5VMRIwEAYDVQQDDAls
+b2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcIbFrg/fX
+EMcFfLUaWGqHh7K9KyesbhG0oEPv0dg0oxKifNH1UPzXMCZNV32JxN0a4Q7c8A4E
+PjqdmPys6nKsbXWH3N2QmuA73uSmbxUvkwReyGNbQZ8mNQUvdFEFNOJzD9E+3+tm
+DN+t2bpZ3JATp6AkMvMDKclcbzhkrr1c+1A+1J4rUWGHWs24Y1uo3H8rMNKu4zj5
+lACR/LNO1n1KDp/oKWqjJCOjdTy+9MalSFczv/S8ZtVlJfnXJ6FTAUB8Y2dhF6rU
+1XinHARZQo+7nypvy0pUOmYBBel/c7N0ldbHL3fPkbo911dFuAMpfafUu8lRPV31
+5PFpo+Zf1UlTAgMBAAGjUzBRMB0GA1UdDgQWBBRz/qPuzkobevw9ZSeXgSbcDcrs
+nDAfBgNVHSMEGDAWgBRz/qPuzkobevw9ZSeXgSbcDcrsnDAPBgNVHRMBAf8EBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCID3wnOEfjxAkB1wJjkyw6MLCxe0Cc9ZpS
+yiMXduINtK8Yu640K5O/ORVa5OmnMU6ykP/sAIqn0MajiI88kWIOLx5ojAFmoFYX
+3MwZusoZbmLrh+ca84FlWHaKREVDV7v0dnJ4zngczCNH5kmzjmWznJxzQwFsGWCy
+fFuDi5zDVT+xvHGdfcsOAtNH49mEBtoxmTdsDFEKDSLUMKfpBePZJYwvTb59PG7D
+5zJVNsnRW5M38x/Y+q3jhlTQPglAoRRKcfVRwGVBjrXi6ltVCuR2cns6ZRhIyhtx
+x6ZNtlwe9dum3ZEOJybHsfWXi6xYvHuizh0nzUEF92kABO1e726t
+-----END CERTIFICATE-----
+subject=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+issuer=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1463 bytes and written 323 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+DONE
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 64036352C83A55567E122848F9E25B4C3CE0AD58988499AC002208B9AA5619BD
+    Session-ID-ctx: 
+    Resumption PSK: 9F5239B11B910E7F0107DDE4C93D622587E07994FF9408403A267E5FF15622BF9E3EC0CDE5B10B9633BFD17316A53E60
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 3600 (seconds)
+    TLS session ticket:
+    0000 - cb b6 69 4c b8 72 05 a1-b4 52 32 be 31 92 9d fd   ..iL.r...R2.1...
+    0010 - 69 f9 f6 88 ff 9d b7 9e-ca 4f c9 8b c2 5f 2a 6b   i........O..._*k
+
+    Start Time: 1795003860
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 1C979B34F519C260C3DE13746322472E04EE2DE14BD2FBA62F829261D6B1EB96
+    Session-ID-ctx: 
+    Resumption PSK: 7D8DC24DA65D79168B0A38F1C0220D391C7648F1BAC6165F20E15A181A09EBA06D5F239F9A3E6A9F5474B930E37F9846
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 3600 (seconds)
+    TLS session ticket:
+    0000 - 25 ee d4 b2 f8 e3 e6 ad-27 ff 71 8b 06 a0 e5 7b   %.......'.q....{
+    0010 - a8 5f 07 f4 fd 33 a2 0b-bf ca d6 56 06 aa d3 b6   ._...3.....V....
+
+    Start Time: 1795003860
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK

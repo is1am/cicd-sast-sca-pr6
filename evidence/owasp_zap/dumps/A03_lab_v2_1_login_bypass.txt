@@ -1,0 +1,27 @@
+### A03_lab_v2_1_login_bypass
+# ZAP history id: 13
+
+POST http://localhost:5002/api/login HTTP/1.1
+Host: localhost:5002
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 42
+Content-Type: application/json
+
+{"username": "admin' --", "password": "x"}
+
+HTTP/1.1 401 UNAUTHORIZED
+Server: Werkzeug/3.1.9 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:14 GMT
+Content-Type: application/json
+Content-Length: 32
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+Referrer-Policy: no-referrer
+Cache-Control: no-store
+Connection: close
+
+{"error":"invalid credentials"}
+

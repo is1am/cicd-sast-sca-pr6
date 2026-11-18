@@ -1,0 +1,58 @@
+[
+         {
+              "id"           : "engine_problem",
+              "ip"           : "/",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "No engine or GOST support via engine with your /home/testssl/bin/openssl.Linux.x86_64"
+          }
+,         {
+              "id"           : "FS_KEMs",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "No KEMs offered"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "No SAN, browsers are complaining"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "via CN only (same w/o SNI)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "CRITICAL",
+              "finding"      : "failed (self signed)."
+          }
+,         {
+              "id"           : "cert_revocation",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "Neither CRL nor OCSP URI provided"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "localhost/127.0.0.1",
+              "port"         : "443",
+              "severity"     : "CRITICAL",
+              "finding"      : "T"
+          }
+]

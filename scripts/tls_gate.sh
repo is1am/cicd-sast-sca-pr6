@@ -11,7 +11,10 @@ try() {   # try <описание> <ожидание: accept|reject> <аргум
   echo | timeout 5 openssl s_client -connect "$HOST:$PORT" -servername "$HOST" "$@" >/tmp/tls_out 2>&1
   # строка «New, TLSv1.x, Cipher is <набор>» печатается для TLS 1.0–1.3; при отказе — «Cipher is (NONE)»
   if grep -qE "^New, .*Cipher is [A-Z0-9_-]+$" /tmp/tls_out; then
-    got=accept; detail=$(grep -m1 -E "^New, " /tmp/tls_out)
+    got=accept
+    proto=$(grep -m1 -E "^ *Protocol *:" /tmp/tls_out | awk '{print $3}')
+    [ -z "$proto" ] && proto=$(grep -m1 -E "^New, " /tmp/tls_out | cut -d, -f2 | tr -d ' ')
+    detail="$proto $(grep -m1 -E "^New, " /tmp/tls_out | sed 's/.*Cipher is //')"
   else
     got=reject; detail=$(grep -m1 -iE "alert|error|no protocols|handshake" /tmp/tls_out | cut -c1-90)
   fi

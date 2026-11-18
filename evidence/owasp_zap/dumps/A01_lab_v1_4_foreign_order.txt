@@ -1,0 +1,21 @@
+### A01_lab_v1_4_foreign_order
+# ZAP history id: 29
+
+GET http://localhost:5001/api/orders/2 HTTP/1.1
+Host: localhost:5001
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiYWxpeWEiLCJyb2xlIjoidXNlciJ9.fXInHtEC6QDjWbzS5QVMju_D-ktxI0LBOvX8aDx9EO0
+
+
+
+HTTP/1.1 200 OK
+Server: Werkzeug/2.2.2 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:20 GMT
+Content-Type: application/json
+Content-Length: 209
+Connection: close
+
+{"address":"\u0410\u0441\u0442\u0430\u043d\u0430, \u043f\u0440. \u041c\u0430\u043d\u0433\u0438\u043b\u0438\u043a \u0415\u043b, 55","id":2,"item":"USB-\u0442\u043e\u043a\u0435\u043d","total":18000,"user_id":3}
+

@@ -1,0 +1,76 @@
+### A03_juice_2_login_quote
+# ZAP history id: 5
+
+POST http://localhost:3000/rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 31
+Content-Type: application/json
+
+{"email": "'", "password": "x"}
+
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:11 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+content-length: 1449
+
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
+  background-repeat: no-repeat;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2 {
+  font-size: 22px;
+  color: #343434;
+}
+h1 em, h2 em {
+  padding: 0 5px;
+  font-weight: normal;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  margin-top: 10px;
+}
+ul li {
+  list-style: none;
+}
+#stacktrace {
+  margin-left: 60px;
+}
+</style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>OWASP Juice Shop (Express ^4.22.1)</h1>
+      <h2><em>500</em> Error</h2>
+      <ul id="stacktrace"><li> &nbsp; &nbsp;at Database.&lt;anonymous&gt; (/juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50</li><li> &nbsp; &nbsp;at new Promise (&lt;anonymous&gt;)</li><li> &nbsp; &nbsp;at Query.run (/juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/sequelize/lib/sequelize.js:315:28</li><li> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:104:5)</li></ul>
+    </div>
+  </body>
+</html>
+

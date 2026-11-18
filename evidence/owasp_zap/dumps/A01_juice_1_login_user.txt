@@ -1,0 +1,28 @@
+### A01_juice_1_login_user
+# ZAP history id: 19
+
+POST http://localhost:3000/rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 68
+Content-Type: application/json
+
+{"email": "student1795002675@lab.local", "password": "Student#2026"}
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 817
+ETag: W/"331-8aWvKp0QWdjNH/pFHoJ4P9ZJLKs"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:15 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoyNiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6InN0dWRlbnQxNzk1MDAyNjc1QGxhYi5sb2NhbCIsInBhc3N3b3JkIjoiOTlhNWY3YWU0MDljZGQ5Mzg2N2IzODBlY2RhNTJmMzQiLCJyb2xlIjoiY3VzdG9tZXIiLCJkZWx1eGVUb2tlbiI6IiIsImxhc3RMb2dpbklwIjoiMC4wLjAuMCIsInByb2ZpbGVJbWFnZSI6Ii9hc3NldHMvcHVibGljL2ltYWdlcy91cGxvYWRzL2RlZmF1bHQuc3ZnIiwidG90cFNlY3JldCI6IiIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJ1cGRhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJkZWxldGVkQXQiOm51bGx9LCJiaWQiOjYsImlhdCI6MTc5NTAwMjY3Nn0.hWmqVkboexjeyVqaFtpaLZcYcHrPu-tqtDMpWdWvwfU1m8QWrB3dEIM6MKS5RmogsLw7CcrwwaxJ1EDIPnwaIlr6JUFEDHSoB6QGezZCXK0U2ShpzZl4XdHyjjnpsgJmdQL8fkfK-QiLpgdLHdR-zATVm9WL2HZP6aLp6NEl0bc","bid":6,"umail":"student1795002675@lab.local"}}

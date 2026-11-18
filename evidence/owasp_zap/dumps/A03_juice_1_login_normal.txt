@@ -1,0 +1,28 @@
+### A03_juice_1_login_normal
+# ZAP history id: 1
+
+POST http://localhost:3000/rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Content-Length: 56
+Content-Type: application/json
+
+{"email": "nosuchuser@juice-sh.op", "password": "wrong"}
+
+HTTP/1.1 401 Unauthorized
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: text/html; charset=utf-8
+Content-Length: 26
+ETag: W/"1a-ARJvVK+smzAF3QQve2mDSG+3Eus"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+Invalid email or password.

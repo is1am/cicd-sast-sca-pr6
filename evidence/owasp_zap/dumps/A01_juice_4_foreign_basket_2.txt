@@ -1,0 +1,27 @@
+### A01_juice_4_foreign_basket_2
+# ZAP history id: 23
+
+GET http://localhost:3000/rest/basket/2 HTTP/1.1
+Host: localhost:3000
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoyNiwidXNlcm5hbWUiOiIiLCJlbWFpbCI6InN0dWRlbnQxNzk1MDAyNjc1QGxhYi5sb2NhbCIsInBhc3N3b3JkIjoiOTlhNWY3YWU0MDljZGQ5Mzg2N2IzODBlY2RhNTJmMzQiLCJyb2xlIjoiY3VzdG9tZXIiLCJkZWx1eGVUb2tlbiI6IiIsImxhc3RMb2dpbklwIjoiMC4wLjAuMCIsInByb2ZpbGVJbWFnZSI6Ii9hc3NldHMvcHVibGljL2ltYWdlcy91cGxvYWRzL2RlZmF1bHQuc3ZnIiwidG90cFNlY3JldCI6IiIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJ1cGRhdGVkQXQiOiIyMDI2LTExLTE4IDExOjUxOjE1LjI0OCArMDA6MDAiLCJkZWxldGVkQXQiOm51bGx9LCJiaWQiOjYsImlhdCI6MTc5NTAwMjY3Nn0.hWmqVkboexjeyVqaFtpaLZcYcHrPu-tqtDMpWdWvwfU1m8QWrB3dEIM6MKS5RmogsLw7CcrwwaxJ1EDIPnwaIlr6JUFEDHSoB6QGezZCXK0U2ShpzZl4XdHyjjnpsgJmdQL8fkfK-QiLpgdLHdR-zATVm9WL2HZP6aLp6NEl0bc
+
+
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 793
+ETag: W/"319-O5KBfpfEa7M+K8LA18ssos3ukeA"
+Vary: Accept-Encoding
+Date: Wed, 18 Nov 2026 11:51:17 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"status":"success","data":{"id":2,"coupon":null,"UserId":2,"createdAt":"2026-11-18T11:50:55.715Z","updatedAt":"2026-11-18T11:50:55.715Z","Products":[{"id":4,"name":"Raspberry Juice (1000ml)","description":"Made from blended Raspberry Pi, water and sugar.","price":4.99,"deluxePrice":4.99,"image":"raspberry_juice.jpg","alternateImages":[{"file":"raspberry_juice-1x.avif","format":"image/avif","density":"1x"},{"file":"raspberry_juice-2x.avif","format":"image/avif","density":"2x"},{"file":"raspberry_juice-3x.avif","format":"image/avif","density":"3x"}],"createdAt":"2026-11-18T11:50:54.887Z","updatedAt":"2026-11-18T11:50:54.887Z","deletedAt":null,"BasketItem":{"ProductId":4,"BasketId":2,"id":4,"quantity":2,"createdAt":"2026-11-18T11:50:55.958Z","updatedAt":"2026-11-18T11:50:55.958Z"}}]}}

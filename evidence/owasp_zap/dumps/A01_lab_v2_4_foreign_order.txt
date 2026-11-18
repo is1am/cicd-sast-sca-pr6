@@ -1,0 +1,26 @@
+### A01_lab_v2_4_foreign_order
+# ZAP history id: 37
+
+GET http://localhost:5002/api/orders/2 HTTP/1.1
+Host: localhost:5002
+User-Agent: python-requests/2.34.2
+Accept: */*
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTUwMDI2ODEsImV4cCI6MTc5NTAwNDQ4MX0.Pfzq8mY7NAEIw89pdiCZYJn8zddwMY56mL_tjEcTtpk
+
+
+
+HTTP/1.1 403 FORBIDDEN
+Server: Werkzeug/3.1.9 Python/3.12.3
+Date: Wed, 18 Nov 2026 11:51:22 GMT
+Content-Type: application/json
+Content-Length: 22
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+Referrer-Policy: no-referrer
+Cache-Control: no-store
+Connection: close
+
+{"error":"forbidden"}
+

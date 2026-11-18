@@ -1,0 +1,5 @@
+subject=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+issuer=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+notBefore=Nov 18 11:50:05 2026 GMT
+notAfter=Nov 18 11:50:05 2027 GMT
+sha256 Fingerprint=24:27:F5:90:32:DA:66:CD:D8:3D:39:ED:3F:A8:FC:05:B6:B7:D1:CB:38:F0:E5:D6:54:27:DE:6D:D9:AC:EB:5F

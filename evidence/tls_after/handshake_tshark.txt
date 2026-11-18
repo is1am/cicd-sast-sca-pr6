@@ -1,0 +1,15 @@
+4|0|35252|Client Hello (SNI=localhost)|0x0303|0x0304|0x1302,0x1303,0x1301,0x00ff|29|
+6|0|443|Server Hello, Change Cipher Spec, Application Data, Application Data, Application Data, Application Data|0x0303|0x0304|0x1302|29|
+8|0|35252|Change Cipher Spec, Application Data|||||
+9|0|35252|Application Data|||||
+10|0|35252|Application Data|||||
+12|0|443|Application Data|||||
+13|0|443|Application Data|||||
+20|1|35268|Client Hello (SNI=localhost)|0x0303||0xc030,0x00ff||
+22|1|443|Server Hello, Certificate, Server Key Exchange, Server Hello Done|0x0303||0xc030||
+24|1|35268|Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message|||||
+25|1|443|Change Cipher Spec, Encrypted Handshake Message|||||
+26|1|35268|Application Data|||||
+27|1|35268|Encrypted Alert|||||
+35|2|35270|Client Hello (SNI=localhost)|0x0301||0xc00a,0xc014,0x0039,0x0038,0x0088,0x0087,0xc019,0x003a,0x0089,0xc009,0xc013,0x0033,0x0032,0x0045,0x0044,0xc018,0x0034,0x0046,0x0035,0x0084,0x002f,0x0041,0x00ff||
+37|2|443|Alert (Level: Fatal, Description: Protocol Version)|||||70

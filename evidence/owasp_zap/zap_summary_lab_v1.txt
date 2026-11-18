@@ -1,0 +1,6 @@
+High           SQL Injection (CWE-89) — 2 шт.
+Low            Application Error Disclosure (CWE-550) — 8 шт.
+Low            Server Leaks Version Information via "Server" HTTP Response Header Field (CWE-497) — 16 шт.
+Low            X-Content-Type-Options Header Missing (CWE-693) — 6 шт.
+Informational  Authentication Request Identified (CWE--1) — 2 шт.
+Informational  Session Management Response Identified (CWE--1) — 1 шт.

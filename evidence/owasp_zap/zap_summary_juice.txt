@@ -1,0 +1,8 @@
+High           SQL Injection (CWE-89) — 1 шт.
+Medium         Content Security Policy (CSP) Header Not Set (CWE-693) — 165 шт.
+Medium         Cross-Domain Misconfiguration (CWE-264) — 184 шт.
+Low            Application Error Disclosure (CWE-550) — 7 шт.
+Informational  Authentication Request Identified (CWE--1) — 5 шт.
+Informational  Modern Web Application (CWE--1) — 145 шт.
+Informational  Session Management Response Identified (CWE--1) — 1 шт.
+Informational  User Agent Fuzzer (CWE-0) — 29 шт.

@@ -1,0 +1,135 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.76.2"
+  },
+  "ReportID": "01a1ee8f-173c-706b-9906-8a90fb29cce8",
+  "CreatedAt": "2026-11-18T12:08:37.436032504Z",
+  "ArtifactID": "sha256:170608d58ddb3a0f8ac40ae440b59727312bdedd1df8708c7742a8c7ebe210d1",
+  "ArtifactName": "/repo",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "/mnt/c/Users/islam/Desktop/Клиент-серверные технологии и их безопасность/ПР6_CICD_SAST_SCA",
+    "Tags": [
+      "v2-fixed"
+    ],
+    "Commit": "494f0818b9044710ab8ae4685750ecc52386accb",
+    "CommitMsg": "v2: исправление уязвимостей по результатам SAST/SCA\n\n- A03: параметризованные SQL-запросы, удалён /api/tools/ping (shell=True)\n- A01: проверка владельца объекта (IDOR) и RBAC для /api/admin/*\n- A02: секрет JWT из окружения, PBKDF2 вместо MD5, срок жизни токена\n- A08: yaml.safe_load; A05: без debug и трассировок, заголовки безопасности\n- SCA: зависимости обновлены до версий без известных CVE\n- Gitleaks: скомпрометированный секрет отозван, находка подавлена по отпечатку\n- CI: версии GitHub Actions обновлены (по PR Dependabot), уточнено правило Semgrep IDOR,\n  исправлено распознавание TLS 1.3 в tls_gate.sh, скрипты лабораторных частей\n\nCo-Authored-By: Claude Opus 5.5 \u003cnoreply@anthropic.com\u003e",
+    "Author": "Nurtaz1nov \u003c97106124+Nurtaz1nov@users.noreply.github.com\u003e",
+    "Committer": "Nurtaz1nov \u003c97106124+Nurtaz1nov@users.noreply.github.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "requirements.txt",
+      "Class": "lang-pkgs",
+      "Type": "pip",
+      "Packages": [
+        {
+          "Name": "Flask",
+          "Identifier": {
+            "PURL": "pkg:pypi/flask@3.1.3",
+            "UID": "a4e8c04b81a3897f"
+          },
+          "Version": "3.1.3",
+          "Locations": [
+            {
+              "StartLine": 1,
+              "EndLine": 1
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "Jinja2",
+          "Identifier": {
+            "PURL": "pkg:pypi/jinja2@3.1.6",
+            "UID": "df87b10b4f3fcdf6"
+          },
+          "Version": "3.1.6",
+          "Locations": [
+            {
+              "StartLine": 3,
+              "EndLine": 3
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "PyJWT",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyjwt@2.15.1",
+            "UID": "b97c67a2c1a4df9e"
+          },
+          "Version": "2.15.1",
+          "Locations": [
+            {
+              "StartLine": 4,
+              "EndLine": 4
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "PyYAML",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyyaml@6.0.3",
+            "UID": "f98593e7471ddf7d"
+          },
+          "Version": "6.0.3",
+          "Locations": [
+            {
+              "StartLine": 5,
+              "EndLine": 5
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "Werkzeug",
+          "Identifier": {
+            "PURL": "pkg:pypi/werkzeug@3.1.9",
+            "UID": "be0705c974f1b9a1"
+          },
+          "Version": "3.1.9",
+          "Locations": [
+            {
+              "StartLine": 2,
+              "EndLine": 2
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "requests",
+          "Identifier": {
+            "PURL": "pkg:pypi/requests@2.34.2",
+            "UID": "1731c4abbfa06abf"
+          },
+          "Version": "2.34.2",
+          "Locations": [
+            {
+              "StartLine": 6,
+              "EndLine": 6
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "urllib3",
+          "Identifier": {
+            "PURL": "pkg:pypi/urllib3@2.8.0",
+            "UID": "f6d8af514347ddaf"
+          },
+          "Version": "2.8.0",
+          "Locations": [
+            {
+              "StartLine": 7,
+              "EndLine": 7
+            }
+          ],
+          "AnalyzedBy": "pip"
+        }
+      ]
+    }
+  ]
+}

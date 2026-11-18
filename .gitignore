@@ -8,3 +8,9 @@ ssl/
 semgrep.json
 sbom.cdx.json
 testssl.txt
+
+# отчёт с персональными данными — только локально
+report/*.docx
+report/*.pdf
+report/build_report.py
+report/__pycache__/

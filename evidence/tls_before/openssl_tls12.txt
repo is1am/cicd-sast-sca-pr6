@@ -1,0 +1,82 @@
+depth=0 C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+   i:C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov 18 11:50:05 2026 GMT; NotAfter: Nov 18 11:50:05 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDgzCCAmugAwIBAgIURBjmMiQmi1H7vWTXAlVBvTWSiWMwDQYJKoZIhvcNAQEL
+BQAwUTELMAkGA1UEBhMCS1oxDzANBgNVBAgMBkFzdGFuYTEPMA0GA1UEBwwGQXN0
+YW5hMQwwCgYDVQQKDANFTlUxEjAQBgNVBAMMCWxvY2FsaG9zdDAeFw0yNjExMTgx
+MTUwMDVaFw0yNzExMTgxMTUwMDVaMFExCzAJBgNVBAYTAktaMQ8wDQYDVQQIDAZB
+c3RhbmExDzANBgNVBAcMBkFzdGFuYTEMMAoGA1UECgwDRU5VMRIwEAYDVQQDDAls
+b2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcIbFrg/fX
+EMcFfLUaWGqHh7K9KyesbhG0oEPv0dg0oxKifNH1UPzXMCZNV32JxN0a4Q7c8A4E
+PjqdmPys6nKsbXWH3N2QmuA73uSmbxUvkwReyGNbQZ8mNQUvdFEFNOJzD9E+3+tm
+DN+t2bpZ3JATp6AkMvMDKclcbzhkrr1c+1A+1J4rUWGHWs24Y1uo3H8rMNKu4zj5
+lACR/LNO1n1KDp/oKWqjJCOjdTy+9MalSFczv/S8ZtVlJfnXJ6FTAUB8Y2dhF6rU
+1XinHARZQo+7nypvy0pUOmYBBel/c7N0ldbHL3fPkbo911dFuAMpfafUu8lRPV31
+5PFpo+Zf1UlTAgMBAAGjUzBRMB0GA1UdDgQWBBRz/qPuzkobevw9ZSeXgSbcDcrs
+nDAfBgNVHSMEGDAWgBRz/qPuzkobevw9ZSeXgSbcDcrsnDAPBgNVHRMBAf8EBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCID3wnOEfjxAkB1wJjkyw6MLCxe0Cc9ZpS
+yiMXduINtK8Yu640K5O/ORVa5OmnMU6ykP/sAIqn0MajiI88kWIOLx5ojAFmoFYX
+3MwZusoZbmLrh+ca84FlWHaKREVDV7v0dnJ4zngczCNH5kmzjmWznJxzQwFsGWCy
+fFuDi5zDVT+xvHGdfcsOAtNH49mEBtoxmTdsDFEKDSLUMKfpBePZJYwvTb59PG7D
+5zJVNsnRW5M38x/Y+q3jhlTQPglAoRRKcfVRwGVBjrXi6ltVCuR2cns6ZRhIyhtx
+x6ZNtlwe9dum3ZEOJybHsfWXi6xYvHuizh0nzUEF92kABO1e726t
+-----END CERTIFICATE-----
+subject=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+issuer=C = KZ, ST = Astana, L = Astana, O = ENU, CN = localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1564 bytes and written 299 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 957DE31D17BA2CA1700DD5B8708BF0E01779A88C16AF66E8BB5AAB9B1C642EAA
+    Session-ID-ctx: 
+    Master-Key: 927EAE47AF7EA10DE409F5A59E8EE3CFC347ECDAC71D0666F7F8D8469D25E081532B01295D9E2C211F0A2931B75C541D
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 59 d6 8c da 4e 13 c3 5d-8c ab 5a 03 92 44 94 7a   Y...N..]..Z..D.z
+    0010 - 5b 88 f9 91 d7 07 ae 56-48 9d a3 a0 6e ad e7 59   [......VH...n..Y
+    0020 - 83 e8 46 4e 55 03 98 67-72 17 a9 88 31 93 cb 69   ..FNU..gr...1..i
+    0030 - 27 2e 84 59 4a 44 b3 28-de c9 9e bc 82 b0 91 dc   '..YJD.(........
+    0040 - 92 b4 23 16 45 c5 6f 96-6f ac e0 b0 d4 ae 14 51   ..#.E.o.o......Q
+    0050 - fe 8d cf b3 2c 6a 98 d1-c4 5d 3d 45 bc 5a 06 2d   ....,j...]=E.Z.-
+    0060 - 62 ed a0 99 71 8f e6 b2-21 92 71 b2 48 34 b8 29   b...q...!.q.H4.)
+    0070 - 81 bf 48 4e c4 1f bf c2-ff a2 cd 0d 40 a8 6f 19   ..HN........@.o.
+    0080 - ae aa f4 1b 19 60 7d a0-27 94 20 b8 54 ef 5d 96   .....`}.'. .T.].
+    0090 - b0 ad 3f 16 6d 97 d9 a4-0b 09 90 2b 60 b9 56 50   ..?.m......+`.VP
+    00a0 - ae cf 1a 6e b9 55 ee 51-59 d6 8d 00 31 77 d9 97   ...n.U.QY...1w..
+    00b0 - 83 68 60 1a 91 21 66 58-c4 cf 1f 97 84 8e 8e 8b   .h`..!fX........
+
+    Start Time: 1795003659
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: yes
+---
+DONE

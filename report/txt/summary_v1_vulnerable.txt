@@ -1,0 +1,26 @@
+root@lab:~/pr6# git checkout v1-vulnerable && scripts/run_scans.sh evidence/v1_vulnerable
+=== Gitleaks
+9:23AM INF 1 commits scanned.
+9:23AM WRN leaks found: 1
+=== Semgrep
+ • Findings: 13 (13 blocking)
+ • Rules run: 95
+=== Bandit (severity >= medium)
+		Low: 2
+		Medium: 4
+		High: 3
+=== pip-audit
+Found 45 known vulnerabilities in 7 packages
+=== Trivy (HIGH,CRITICAL)
+│ requirements.txt │ pip  │       18        │
+Total: 18 (HIGH: 16, CRITICAL: 2)
+=== pytest
+================== 12 failed, 3 passed, 466 warnings in 2.47s ==================
+
+=== ИТОГ
+gitleaks   exit=1   FAIL
+semgrep    exit=1   FAIL
+bandit     exit=1   FAIL
+pip_audit  exit=1   FAIL
+trivy      exit=1   FAIL
+pytest     exit=1   FAIL

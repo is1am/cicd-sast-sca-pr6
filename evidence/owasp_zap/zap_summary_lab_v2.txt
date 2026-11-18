@@ -1,0 +1,3 @@
+Low            Server Leaks Version Information via "Server" HTTP Response Header Field (CWE-497) — 16 шт.
+Informational  Authentication Request Identified (CWE--1) — 2 шт.
+Informational  Session Management Response Identified (CWE--1) — 1 шт.
