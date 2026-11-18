@@ -166,6 +166,10 @@ def security_headers(resp):
     resp.headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'"
     resp.headers["Referrer-Policy"] = "no-referrer"
     resp.headers["Cache-Control"] = "no-store"
+    # найдено DAST (ZAP 90004): изоляция от чужих источников (Spectre-подобные атаки)
+    resp.headers["Cross-Origin-Resource-Policy"] = "same-origin"
+    resp.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+    resp.headers["Permissions-Policy"] = "geolocation=(), camera=(), microphone=()"
     return resp
 
 

@@ -106,6 +106,7 @@ def test_security_headers_present(client):
     assert r.headers.get("X-Content-Type-Options") == "nosniff"
     assert "default-src" in r.headers.get("Content-Security-Policy", "")
     assert r.headers.get("X-Frame-Options") == "DENY"
+    assert r.headers.get("Cross-Origin-Resource-Policy") == "same-origin"
 
 
 def test_passwords_are_not_unsalted_md5(client):
