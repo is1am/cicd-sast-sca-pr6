@@ -181,7 +181,8 @@ jobs:
       - name: Запуск приложения
         run: |
           # одноразовый секрет только для этого прогона, нигде не хранится
-          export SHOP_SECRET_KEY=$(openssl rand -hex 32)
+          SHOP_SECRET_KEY=$(openssl rand -hex 32)
+          export SHOP_SECRET_KEY
           pip install -r requirements.txt
           nohup python -m src.shop.app > app.log 2>&1 &
           timeout 30 sh -c 'until curl -sf http://127.0.0.1:5000/api/products >/dev/null; do sleep 1; done'
