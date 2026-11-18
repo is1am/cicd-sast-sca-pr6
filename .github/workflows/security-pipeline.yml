@@ -31,7 +31,7 @@ jobs:
         run: |
           docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest \
             git /repo --redact --report-format sarif --report-path /repo/gitleaks.sarif --exit-code 1
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with: { name: gitleaks-report, path: gitleaks.sarif }
 
@@ -58,7 +58,7 @@ jobs:
       - uses: github/codeql-action/upload-sarif@v3
         if: always()
         with: { sarif_file: semgrep.sarif, category: semgrep }
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with: { name: semgrep-report, path: "semgrep.*" }
 
@@ -109,7 +109,7 @@ jobs:
         run: pip-audit -r requirements.txt --no-deps --disable-pip -f cyclonedx-json -o sbom.cdx.json || true
       - name: pip-audit (gate — любая известная уязвимость)
         run: pip-audit -r requirements.txt --no-deps --disable-pip --desc on
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with: { name: sbom, path: sbom.cdx.json }
 
@@ -219,6 +219,6 @@ jobs:
         run: |
           docker run --rm --network host drwetter/testssl.sh \
             --severity MEDIUM --color 0 --warnings off https://localhost:443 | tee testssl.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with: { name: testssl-report, path: testssl.txt }
