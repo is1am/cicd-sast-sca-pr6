@@ -8,9 +8,10 @@ FAIL=0
 
 try() {   # try <описание> <ожидание: accept|reject> <аргументы openssl s_client>
   local name=$1 expect=$2; shift 2
-  if echo | timeout 5 openssl s_client -connect "$HOST:$PORT" -servername "$HOST" "$@" >/tmp/tls_out 2>&1 \
-     && grep -q "^ *Cipher *: *[A-Z0-9]" /tmp/tls_out; then
-    got=accept; detail=$(grep -m1 -E "^ *Cipher *:" /tmp/tls_out | sed 's/^ *//')
+  echo | timeout 5 openssl s_client -connect "$HOST:$PORT" -servername "$HOST" "$@" >/tmp/tls_out 2>&1
+  # строка «New, TLSv1.x, Cipher is <набор>» печатается для TLS 1.0–1.3; при отказе — «Cipher is (NONE)»
+  if grep -qE "^New, .*Cipher is [A-Z0-9_-]+$" /tmp/tls_out; then
+    got=accept; detail=$(grep -m1 -E "^New, " /tmp/tls_out)
   else
     got=reject; detail=$(grep -m1 -iE "alert|error|no protocols|handshake" /tmp/tls_out | cut -c1-90)
   fi
