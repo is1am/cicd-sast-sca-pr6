@@ -28,6 +28,11 @@
 | `scripts/tls_lab.sh`, `scripts/owasp_zap_lab.py` | лабораторные части 1–3 (OpenSSL, testssl.sh, tshark, ZAP) |
 | `evidence/` | результаты всех прогонов |
 
+## Демонстрация
+
+Пошаговый сценарий — в [DEMO.md](DEMO.md), все этапы запускаются скриптом `scripts/demo.sh`
+(`prepare`, `scan-v1`, `scan-v2`, `tls-before`, `tls-after`, `apps`, `attack`, `zap`, `stop`).
+
 ## Запуск
 
 ```bash
