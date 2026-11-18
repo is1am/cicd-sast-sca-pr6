@@ -1,0 +1,224 @@
+# CI/CD Security Pipeline: SAST + SCA (+ секреты, тесты, DAST и TLS-аудит)
+# Любая найденная уязвимость уровня HIGH/CRITICAL (ERROR в Semgrep) останавливает сборку.
+name: security-pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * 1"      # еженедельно: новые CVE публикуются и без изменений кода
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ------------------------------------------------------------------ 1. Секреты
+  secrets:
+    name: Secrets (Gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0               # проверяется вся история коммитов
+      - name: Gitleaks
+        run: |
+          docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest \
+            git /repo --redact --report-format sarif --report-path /repo/gitleaks.sarif --exit-code 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: gitleaks-report, path: gitleaks.sarif }
+
+  # ------------------------------------------------------------------ 2. SAST
+  sast-semgrep:
+    name: SAST (Semgrep)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write          # загрузка SARIF в Security → Code scanning
+    container: semgrep/semgrep:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Semgrep scan
+        run: |
+          semgrep scan \
+            --config .semgrep/rules.yml \
+            --config p/python --config p/flask --config p/owasp-top-ten --config p/secrets \
+            --metrics off \
+            --sarif --output semgrep.sarif \
+            --json-output semgrep.json \
+            --severity ERROR --error \
+            src
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with: { sarif_file: semgrep.sarif, category: semgrep }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: semgrep-report, path: "semgrep.*" }
+
+  sast-bandit:
+    name: SAST (Bandit)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install "bandit[sarif]==1.8.6"
+      - name: Bandit (gate — medium и выше)
+        run: |
+          bandit -r src -f sarif -o bandit.sarif --exit-zero
+          bandit -r src --severity-level medium --confidence-level medium
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with: { sarif_file: bandit.sarif, category: bandit }
+
+  codeql:
+    name: SAST (CodeQL)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          queries: security-extended
+      - uses: github/codeql-action/analyze@v3
+        with: { category: codeql }
+
+  # ------------------------------------------------------------------ 3. SCA
+  sca-pip-audit:
+    name: SCA (pip-audit + SBOM)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pip-audit==2.9.0
+      - name: SBOM (CycloneDX)
+        run: pip-audit -r requirements.txt --no-deps --disable-pip -f cyclonedx-json -o sbom.cdx.json || true
+      - name: pip-audit (gate — любая известная уязвимость)
+        run: pip-audit -r requirements.txt --no-deps --disable-pip --desc on
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: sbom, path: sbom.cdx.json }
+
+  sca-trivy:
+    name: SCA (Trivy)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trivy — отчёт SARIF (все уровни)
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          format: sarif
+          output: trivy.sarif
+          exit-code: "0"
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with: { sarif_file: trivy.sarif, category: trivy }
+      - name: Trivy — gate (HIGH/CRITICAL с доступным исправлением)
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          format: table
+          exit-code: "1"
+
+  dependency-review:
+    name: SCA (Dependency Review, только PR)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+          comment-summary-in-pr: always
+
+  # ------------------------------------------------------------------ 4. Тесты
+  security-tests:
+    name: Security regression tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt pytest
+      - run: pytest -v
+
+  # ------------------------------------------------------------------ 5. DAST (после того, как код прошёл SAST/SCA)
+  dast-zap:
+    name: DAST (OWASP ZAP baseline)
+    needs: [sast-semgrep, sast-bandit, sca-pip-audit, sca-trivy, security-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Запуск приложения
+        run: |
+          # одноразовый секрет только для этого прогона, нигде не хранится
+          export SHOP_SECRET_KEY=$(openssl rand -hex 32)
+          pip install -r requirements.txt
+          nohup python -m src.shop.app > app.log 2>&1 &
+          timeout 30 sh -c 'until curl -sf http://127.0.0.1:5000/api/products >/dev/null; do sleep 1; done'
+      - name: ZAP baseline
+        uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: http://127.0.0.1:5000/api/products
+          rules_file_name: .zap/rules.tsv
+          fail_action: true
+          allow_issue_writing: false
+          artifact_name: zap-report
+
+  # ------------------------------------------------------------------ 6. TLS-аудит конфигурации Nginx
+  tls-audit:
+    name: TLS gate (Nginx + testssl.sh)
+    needs: [sast-semgrep, sca-pip-audit]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Сертификат стенда
+        run: |
+          mkdir -p ssl
+          openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+            -keyout ssl/server.key -out ssl/server.crt \
+            -subj "/C=KZ/ST=Astana/L=Astana/O=ENU/CN=localhost"
+      - name: Nginx с проверяемой конфигурацией
+        run: |
+          docker run -d --name nginx --network host \
+            -v "$PWD/nginx/tls-hardened.conf:/etc/nginx/conf.d/default.conf:ro" \
+            -v "$PWD/ssl:/etc/nginx/ssl:ro" nginx:1.27
+          sleep 3
+      - name: TLS gate
+        run: bash scripts/tls_gate.sh localhost 443
+      - name: testssl.sh
+        run: |
+          docker run --rm --network host drwetter/testssl.sh \
+            --severity MEDIUM --color 0 --warnings off https://localhost:443 | tee testssl.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: testssl-report, path: testssl.txt }
