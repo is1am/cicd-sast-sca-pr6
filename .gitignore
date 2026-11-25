@@ -15,3 +15,4 @@ report/*.pdf
 report/build_report.py
 report/__pycache__/
 report/img/shot_*.png
+report/build_defense.py
